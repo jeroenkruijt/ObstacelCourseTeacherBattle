@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2643061280591261442}
   - component: {fileID: 8636219214265477942}
-  - component: {fileID: 4029901382776266305}
+  - component: {fileID: 411247135270979032}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 20d0af3b551ef834caa420bfb2205168, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b3b2d082bc174bc459756ed6012bb3e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4029901382776266305
+--- !u!114 &411247135270979032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3201736807042608462}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d1eb569fa770b040ae7fc28132fcbce, type: 3}
+  m_Script: {fileID: 11500000, guid: cc607a751402d574ea8fc3c7d12b6d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3501911863794212967
@@ -105,9 +105,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7155970833273532683}
-  - component: {fileID: 7990224435942179433}
   - component: {fileID: 4666309740217017734}
   - component: {fileID: 3808130299393300268}
+  - component: {fileID: 5659121512666026239}
   m_Layer: 0
   m_Name: Next room
   m_TagString: Next room
@@ -129,18 +129,6 @@ Transform:
   m_Father: {fileID: 2643061280591261442}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7990224435942179433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501911863794212967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9f7c1f7323d7b428696d5434d17d1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &4666309740217017734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,3 +176,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5659121512666026239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501911863794212967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed71aeea25b824f965f24084b252b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
