@@ -7,11 +7,12 @@ namespace Scripts
     public class PlayerController : NetworkBehaviour
     {
         //player
-        [Header("Player Movement:")] public float walkSpeed = 4f;
-
+        [Header("Player Movement:")] 
+        public float walkSpeed = 4f;
         public float speedLimit = 0.7f;
         public float inputHorizontal;
         public float inputVertical;
+        public float direction = 0;
 
         //Components
         private Rigidbody2D rb;
@@ -36,6 +37,23 @@ namespace Scripts
         private void Update()
         {
             HandleMovement();
+            
+            if (inputHorizontal == 1)
+            {
+                direction = 0;
+            }
+            else if (inputHorizontal == -1)
+            {
+                direction = 1;
+            }
+            else if (inputVertical == 1)
+            {
+                direction = 2;          
+            }
+            else if (inputVertical == -1)
+            {
+                direction = 3;            
+            }
         }
         
         private void FixedUpdate()
