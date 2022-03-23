@@ -12,6 +12,7 @@ namespace Scripts
         {
             templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
             templates.currentRooms.Add(this.gameObject);
+            Debug.Log(templates.currentRooms.Count);
         }
     }
 }
