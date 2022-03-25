@@ -8,21 +8,33 @@ namespace Scripts
     {
         public GameObject[] players;
         GameObject culprit;
+
+        public void Start()
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
+        }
         public void DoInteraction()
         {
             Debug.Log("According to Unity I'm a 9sliced");
             for (int i = 0; i < players.Length; i++)
             {
                 PlayerSideInteraction target = players[i].GetComponent<PlayerSideInteraction>();
-                GameObject checker = target.inRange;
-                if (checker = gameObject)
+                //if (checker != null)
                 {
-                    culprit = players[i];
+                    GameObject checker = target.inRange;
+                    if (checker = gameObject)
+                    {
+                        culprit = players[i];
+                    }
                 }
             }
-            culprit.SendMessage("SpeedBuff");
+            if (culprit != null)
+            {
+                culprit.SendMessage("SpeedBuff");
+            }
         }
 
 
     }
 }
+
