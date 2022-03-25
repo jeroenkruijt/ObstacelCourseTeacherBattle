@@ -10,9 +10,9 @@ namespace Scripts
 
         void Start()
         {
-            templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-            templates.currentRooms.Add(this.gameObject);
-            Debug.Log(templates.currentRooms.Count);
+            //templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+            //templates.currentRooms.Add(this.gameObject);
+           // Debug.Log(templates.currentRooms.Count);
         }
     }
 }

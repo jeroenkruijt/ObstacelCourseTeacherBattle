@@ -45,15 +45,15 @@ namespace Scripts
 
         void Update()
         {
-            if(Input.GetButtonDown("Interact") && inRange)
-            {
-                inRange.SendMessage("DoInteraction");
-            }
+            //if(Input.GetButtonDown("Interact") && inRange)
+            //{
+            //    inRange.SendMessage("DoInteraction");
+            //}
 
-            if (Input.GetButtonDown("Attack"))
-            {
-                StartCoroutine(attack());
-            }
+            //if (Input.GetButtonDown("Attack"))
+            //{
+            //    StartCoroutine(attack());
+            //}
 
             if (health <= 0)
             {
