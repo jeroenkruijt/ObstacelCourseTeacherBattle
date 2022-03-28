@@ -11,7 +11,8 @@
                     "id": "d90933a7-4729-42f9-94fe-2465484057dc",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Zoom",
@@ -19,7 +20,8 @@
                     "id": "530edef3-785d-4030-a53b-4640915166dc",
                     "expectedControlType": "Axis",
                     "processors": "Normalize(min=-1,max=1)",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [

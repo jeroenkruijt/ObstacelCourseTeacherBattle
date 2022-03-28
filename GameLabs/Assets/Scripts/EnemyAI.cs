@@ -13,13 +13,18 @@ namespace Scripts
         [SerializeField] private int slimeHealth = 5;
         [SerializeField] private bool takenDamage;
         [SerializeField] private float attackCooldown = 1;
+        [SerializeField] private float range = 0f;
 
         private void Start()
         {
+            /*
             players = GameObject.FindGameObjectsWithTag("Player");
+        */
         }
         private void Update()
         {
+            players = GameObject.FindGameObjectsWithTag("Player");
+            
             int closestPlayerIndex = -1;
             float distanceMin = float.MaxValue;
             for (int i = 0; i < players.Length; i++)
@@ -70,11 +75,12 @@ namespace Scripts
         private IEnumerator dealDamage()
         {
             bool Iframes = false;
-            while (Vector3.Distance(closestPlayer.transform.position, this.transform.position) <= 1)
+            while (Vector3.Distance(closestPlayer.transform.position, this.transform.position) <= range)
             {
                 if (!Iframes)
                 {
                     closestPlayer.SendMessage("goFuckYourself");
+                    Debug.Log("fmylife");
                     Iframes = true;
                 }
                 yield return new WaitForSeconds(attackCooldown);
