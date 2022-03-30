@@ -18,10 +18,8 @@ namespace Scripts
         int armor = 0;
         [SerializeField]
         int damage = 1;
-        [SerializeField]
-        private GameObject healthbar;
 
-
+        
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Interactable"))
@@ -50,7 +48,7 @@ namespace Scripts
 
         void Update()
         {
-            if (Input.GetButtonDown("Interact") && inRange)
+            if(Input.GetButtonDown("Interact") && inRange)
             {
                 if (!isLocalPlayer) return;
                 inRange.SendMessage("DoInteraction");
@@ -63,12 +61,12 @@ namespace Scripts
 
             if (health <= 0)
             {
-                gameObject.GetComponent<ScuffedPlayerController>().enabled = false;
+                gameObject.GetComponent<PlayerController>().enabled = false;
                 gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
 
                 transform.position = new Vector3(99, 99, 99);
 
-                ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
+                PlayerController target = gameObject.GetComponent<PlayerController>();
                 target.walkSpeed = 0;
             }
         }
@@ -76,7 +74,7 @@ namespace Scripts
         public IEnumerator attack()
         {
             GameObject fist = Instantiate(attackHitbox);
-            ScuffedPlayerController pointing = gameObject.GetComponent<ScuffedPlayerController>();
+            PlayerController pointing = gameObject.GetComponent<PlayerController>();
 
             if (pointing.direction == 0)
             {
@@ -101,11 +99,7 @@ namespace Scripts
 
         public void goFuckYourself()
         {
-            health -= (3 - armor);
-            float healthbarstuff = (0.26f * health);
-            Debug.Log(healthbarstuff);
-            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.2f, 1);
-            healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
+            health = health-(3-armor);
         }
 
         public void HealthBuff()
@@ -126,7 +120,7 @@ namespace Scripts
 
         public IEnumerator SpeedBuff()
         {
-            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
+            PlayerController target = gameObject.GetComponent<PlayerController>();
             target.walkSpeed = 10f;
             yield return new WaitForSeconds(5);
             target.walkSpeed = 4f;

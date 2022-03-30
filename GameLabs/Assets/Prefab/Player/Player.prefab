@@ -196,10 +196,9 @@ MonoBehaviour:
   syncInterval: 0.1
   inRange: {fileID: 0}
   attackHitbox: {fileID: 4740279477199393265, guid: 167f3335d57baca4a83e0610c1f077c8, type: 3}
-  health: 50
+  health: 5
   armor: 0
   damage: 1
-  healthbar: {fileID: 0}
 --- !u!61 &5966521263417814165
 BoxCollider2D:
   m_ObjectHideFlags: 0
