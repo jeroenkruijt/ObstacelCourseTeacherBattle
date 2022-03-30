@@ -192,6 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be4e46614654f5459e902c4ccb86bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   inRange: {fileID: 0}
   attackHitbox: {fileID: 4740279477199393265, guid: 167f3335d57baca4a83e0610c1f077c8, type: 3}
   health: 50
