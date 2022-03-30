@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Mirror;
+    
 namespace Scripts
 {
-    public class PlayerSideInteraction : MonoBehaviour
+    public class PlayerSideInteraction : NetworkBehaviour
     {
         [SerializeField]
         public GameObject inRange = null;
@@ -25,6 +26,7 @@ namespace Scripts
         {
             if (other.CompareTag("Interactable"))
             {
+                if (!isLocalPlayer) return;
                 Debug.Log("notices your player UwU");
                 inRange = other.gameObject;
             }
@@ -40,6 +42,7 @@ namespace Scripts
         {
             if (other.CompareTag("Interactable") && other.gameObject == inRange)
             {
+                if (!isLocalPlayer) return;
                 Debug.Log("Don't leave me :(");
                 inRange = null;
             }
@@ -49,6 +52,7 @@ namespace Scripts
         {
             if (Input.GetButtonDown("Interact") && inRange)
             {
+                if (!isLocalPlayer) return;
                 inRange.SendMessage("DoInteraction");
             }
 
