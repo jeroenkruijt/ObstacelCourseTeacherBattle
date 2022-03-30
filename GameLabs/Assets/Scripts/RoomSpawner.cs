@@ -8,8 +8,8 @@ namespace Scripts
     {
         private RoomTemplates templates;
         private int seed;
-        private bool spawned = false;
-        private int roomlimit;
+        //private bool spawned = false;
+        private int roomlimit = 10;
 
         void Start()
         {
@@ -21,18 +21,24 @@ namespace Scripts
 
         void GenerateRoom()
         {
+            //spawned == false &&
+            //if (templates.currentRooms.Count < roomlimit)
 
-            if (spawned == false && templates.currentRooms.Count < 10)
+            //{
+            //    seed = Random.Range(0, templates.Rooms.Length - 1);
+            //}
 
-            {
-                seed = Random.Range(0, templates.Rooms.Length -1);
-            }
-            else if (templates.currentRooms.Count == 10)
-            {
-                seed = templates.Rooms.Length -1;
-            }
+            //if (templates.currentRooms.Count == roomlimit)
+            //{
+            //    seed = templates.Rooms.Length - 1;
+            //}
+            //else
+
+            
+                seed = Random.Range(0, templates.Rooms.Length - 1);
+            
             Instantiate(templates.Rooms[seed], transform.position, templates.Rooms[seed].transform.rotation);
-                spawned = true;
+            //spawned = true;
 
         }
         private void OnTriggerEnter2D(Collider2D other)

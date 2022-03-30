@@ -45,7 +45,7 @@ namespace Scripts
 
         void Update()
         {
-            if(Input.GetButtonDown("Interact") && inRange)
+            if (Input.GetButtonDown("Interact") && inRange)
             {
                 inRange.SendMessage("DoInteraction");
             }
@@ -57,12 +57,12 @@ namespace Scripts
 
             if (health <= 0)
             {
-                gameObject.GetComponent<PlayerController>().enabled = false;
+                gameObject.GetComponent<ScuffedPlayerController>().enabled = false;
                 gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
 
                 transform.position = new Vector3(99, 99, 99);
 
-                PlayerController target = gameObject.GetComponent<PlayerController>();
+                ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
                 target.walkSpeed = 0;
             }
         }
@@ -70,7 +70,7 @@ namespace Scripts
         public IEnumerator attack()
         {
             GameObject fist = Instantiate(attackHitbox);
-            PlayerController pointing = gameObject.GetComponent<PlayerController>();
+            ScuffedPlayerController pointing = gameObject.GetComponent<ScuffedPlayerController>();
 
             if (pointing.direction == 0)
             {
@@ -116,7 +116,7 @@ namespace Scripts
 
         public IEnumerator SpeedBuff()
         {
-            PlayerController target = gameObject.GetComponent<PlayerController>();
+            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
             target.walkSpeed = 10f;
             yield return new WaitForSeconds(5);
             target.walkSpeed = 4f;
