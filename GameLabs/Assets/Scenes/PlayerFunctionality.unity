@@ -182,9 +182,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 48c8512ffe513d442a7b3c8c207a9f2b, type: 3}
 --- !u!1 &366260318
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 728023479028098692, guid: 1e2de231613ff4b40a0c394baae98671, type: 3}
+  m_PrefabInstance: {fileID: 728023478670300890}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -1213,9 +1212,8 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!1 &1637433045
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8079566787964799199, guid: 8a386eda84739af499130ab092986fa7, type: 3}
+  m_PrefabInstance: {fileID: 8079566788476974602}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
