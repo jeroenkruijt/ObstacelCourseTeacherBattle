@@ -1,103 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class managerofgame : MonoBehaviour
 {
-    public static int progressScore = 0;
     [SerializeField]
-    private GameObject moveBarAlong;
+    public int progressScore1 = 0;
+    [SerializeField]
+    private int progressScore2 = 0;
+    [SerializeField]
+    private GameObject ProgressBar1;
     private Vector3 placement;
-    private Vector3 timerPlacement;
-    private bool done1 = true;
-    private bool done2 = true;
-    private bool done3 = true;
-    private bool done4 = true;
-    private bool done5 = true;
-    private bool done6 = true;
-    private bool done7 = true;
-    private bool done8 = true;
-    private bool done9 = true;
-    private bool done10 = true;
+    public float timeValue = 300;
+    public Text timerText;
+    private bool overtime = false;
+    private int winningteam;
+    private bool timerActive = true;
+    private int suddenDeath1;
+    private int suddenDeath2;
 
-    private void Start()
+
+    void Update()
     {
-        StartCoroutine(timer());
-    }
-    private void Update()
-    {
-        if (progressScore == 1 && done1 == true)
-        {
-            placement = new Vector3(0, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done1 = false;
-        }
+        timer();
 
-        if (progressScore == 2 && done2 == true)
-        {
-            placement = new Vector3(1, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done2 = false;
-        }
-
-        if (progressScore == 3 && done3 == true)
-        {
-            placement = new Vector3(2, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done3 = false;
-        }
-
-        if (progressScore == 4 && done4 == true)
-        {
-            placement = new Vector3(3, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done4 = false;
-        }
-        if (progressScore == 5 && done5 == true)
-        {
-            placement = new Vector3(4, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done5 = false;
-        }
-        if (progressScore == 6 && done6 == true)
-        {
-            placement = new Vector3(5, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done6 = false;
-        }
-        if (progressScore == 7 && done7 == true)
-        {
-            placement = new Vector3(6, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done7 = false;
-        }
-        if (progressScore == 8 && done8 == true)
-        {
-            placement = new Vector3(7, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done8 = false;
-        }
-        if (progressScore == 9 && done9 == true)
-        {
-            placement = new Vector3(8, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done9 = false;
-        }
-        if (progressScore == 10 && done10 == true)
-        {
-            placement = new Vector3(9, 16, 0);
-            Instantiate(moveBarAlong, placement, moveBarAlong.transform.rotation);
-            done10 = false;
-        }
+        
     }
 
-    private IEnumerator timer()
+    void timer()
     {
-        for (int i = 0; i < 30; i++)
+        if (timerActive == true)
         {
-            yield return new WaitForSeconds(10);
-            timerPlacement = new Vector3(i - 15, 20, 0);
-            Instantiate(moveBarAlong, timerPlacement, moveBarAlong.transform.rotation);
+            if (timeValue > 0)
+            {
+                timeValue -= Time.deltaTime;
+            }
+            else if (progressScore1 == progressScore2 && overtime == false)
+            {
+                timeValue = 60;
+                overtime = true;
+                suddenDeath1 = progressScore1;
+                suddenDeath2 = progressScore2;
+            }
+            else
+            {
+                gameEnd();
+            }
+
+            DisplayTime(timeValue);
         }
     }
+    void DisplayTime(float timeToDisplay)
+    {
+        if (timeToDisplay < 0)
+        {
+            timeToDisplay = 0;
+        }
+
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timerText.text = string.Format("{0:0}  {1:0 0}", minutes, seconds);
+
+    }
+    void progress1()
+    {
+        progressScore1++;
+        float xcoord = (progressScore1 * 0.4f)-4f;
+        placement = new Vector3(xcoord, 13, 0);
+        Instantiate(ProgressBar1, placement, ProgressBar1.transform.rotation);
+        Debug.Log(progressScore1);
+        if (progressScore1 > suddenDeath1 && overtime)
+        {
+            gameEnd();
+        }   
+    }
+
+    void gameEnd()
+    {
+        timeValue = 0;
+        timerActive = false;
+        if (progressScore1 > progressScore2)
+        {
+            winningteam = 1;
+            Debug.Log("the winning team is team 1 !");
+        }
+        else if (progressScore2 > progressScore1)
+        {
+            winningteam = 2;
+            Debug.Log("the winning team is team 2 !");
+        }
+        else
+        {
+            winningteam = 3;
+            Debug.Log("It's a tie!");
+        }
+    }
+
 }
