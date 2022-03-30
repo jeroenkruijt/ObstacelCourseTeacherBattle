@@ -17,8 +17,10 @@ namespace Scripts
         int armor = 0;
         [SerializeField]
         int damage = 1;
+        [SerializeField]
+        private GameObject healthbar;
 
-        
+
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Interactable"))
@@ -95,7 +97,11 @@ namespace Scripts
 
         public void goFuckYourself()
         {
-            health = health-(3-armor);
+            health -= (3 - armor);
+            float healthbarstuff = (0.26f * health);
+            Debug.Log(healthbarstuff);
+            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.2f, 1);
+            healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
         }
 
         public void HealthBuff()

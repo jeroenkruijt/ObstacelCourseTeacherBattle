@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class progress : MonoBehaviour
 {
+    [SerializeField]
     private bool triggered = false;
+    private GameObject manager;
+    private void Start()
+    {
+        manager = GameObject.Find("managerofgame");
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && triggered == false)
         {
-            managerofgame.progressScore++;
+            manager.SendMessage("progress1");
             triggered = true;
-            Debug.Log(managerofgame.progressScore);
         }
     }
 }

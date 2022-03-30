@@ -9,7 +9,7 @@ namespace Scripts
         private RoomTemplates templates;
         private int seed;
         //private bool spawned = false;
-        private int roomlimit = 10;
+        //private int roomlimit = 10;
 
         void Start()
         {
