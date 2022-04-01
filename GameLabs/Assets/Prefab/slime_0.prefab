@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 886634011082628107}
   - component: {fileID: 886634011082628105}
   - component: {fileID: 886634011082628106}
+  - component: {fileID: -8963246880805670640}
   m_Layer: 0
   m_Name: slime_0
   m_TagString: Enemy
@@ -129,3 +130,21 @@ MonoBehaviour:
   slimeHealth: 5
   takenDamage: 0
   attackCooldown: 1
+  range: 0
+--- !u!114 &-8963246880805670640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886634011082628149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: d1c7ee550674ff045ba4c44d63798339
+  hasSpawned: 0
