@@ -12,6 +12,7 @@ namespace Scripts
         public Vector2 maxPos;
 
         public Vector2 minPos;
+      
 
         private void FixedUpdate()
         {

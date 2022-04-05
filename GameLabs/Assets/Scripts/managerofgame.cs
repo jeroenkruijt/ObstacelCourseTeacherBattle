@@ -19,13 +19,16 @@ public class managerofgame : MonoBehaviour
     private bool timerActive = true;
     private int suddenDeath1;
     private int suddenDeath2;
+    [SerializeField]
+    private GameObject spawn;
 
-
+    private void Start()
+    {
+        spawn.SetActive(true);
+    }
     void Update()
     {
         timer();
-
-        
     }
 
     void timer()

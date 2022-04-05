@@ -19,12 +19,15 @@ namespace Scripts
         [SerializeField]
         int damage = 1;
 
-        
+        private void Start()
+        {
+            if (!isLocalPlayer) return;
+
+        }
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Interactable"))
             {
-                if (!isLocalPlayer) return;
                 Debug.Log("notices your player UwU");
                 inRange = other.gameObject;
             }
@@ -40,7 +43,7 @@ namespace Scripts
         {
             if (other.CompareTag("Interactable") && other.gameObject == inRange)
             {
-                if (!isLocalPlayer) return;
+                //if (!isLocalPlayer) return;
                 Debug.Log("Don't leave me :(");
                 inRange = null;
             }
@@ -48,9 +51,11 @@ namespace Scripts
 
         void Update()
         {
+            
+
             if(Input.GetButtonDown("Interact") && inRange)
             {
-                if (!isLocalPlayer) return;
+                //if (!isLocalPlayer) return;
                 inRange.SendMessage("DoInteraction");
             }
 
@@ -66,7 +71,7 @@ namespace Scripts
 
                 transform.position = new Vector3(99, 99, 99);
 
-                PlayerController target = gameObject.GetComponent<PlayerController>();
+                ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
                 target.walkSpeed = 0;
             }
         }
@@ -74,7 +79,7 @@ namespace Scripts
         public IEnumerator attack()
         {
             GameObject fist = Instantiate(attackHitbox);
-            PlayerController pointing = gameObject.GetComponent<PlayerController>();
+            ScuffedPlayerController pointing = gameObject.GetComponent<ScuffedPlayerController>();
 
             if (pointing.direction == 0)
             {
