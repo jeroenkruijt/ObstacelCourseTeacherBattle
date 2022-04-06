@@ -409,7 +409,7 @@ MonoBehaviour:
   UIPlayerParent: {fileID: 1799473569}
   UIPlayerPrefab: {fileID: 6062990374055986372, guid: 10c279cefc1c37c43aa3d8334427f01a, type: 3}
   matchIDText: {fileID: 2060954398}
-  beginGameButton: {fileID: 0}
+  beginGameButton: {fileID: 1305433566}
 --- !u!4 &486362350
 Transform:
   m_ObjectHideFlags: 0
