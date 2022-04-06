@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using Mirror;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Lobby
@@ -33,6 +35,7 @@ namespace Lobby
             }
         }
 
+        #region host game
         public void HostGame()
         {
             //gets random 5 diggit code for the game that people could 
@@ -64,7 +67,11 @@ namespace Lobby
             UILobby.instance.HostSuccess(success);
         }
         
-        
+        #endregion
+
+
+        #region join game
+
         public void JoinGame(string _inputID)
         {
             CmdJoinGame (_inputID);
@@ -93,6 +100,38 @@ namespace Lobby
             Debug.Log($"MatchID: {matchID} == {_matchID}");
             UILobby.instance.JoinSuccess(success);
         }
+
+        #endregion
+
+
+        #region start game
+
+                public void BeginGame()
+                {
+                    CmdBeginGame();
+                }
+        
+                [Command]
+                void CmdBeginGame()
+                {
+                    MatchMaker.instance.BeginGame();
+                    Debug.Log ($"<color=red>Game Beginning</color>");
+                }
+
+                public void StartGame()
+                {
+                    TargetBeginGame ();
+                }
+        
+                [TargetRpc]
+                void TargetBeginGame () {
+                    Debug.Log ($"MatchID: {matchID} | Beginning");
+                    //Additively load game scene
+                    SceneManager.LoadScene (2, LoadSceneMode.Additive);
+                }
+
+        #endregion
+        
         
     }
 }

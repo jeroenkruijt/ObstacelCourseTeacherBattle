@@ -27,6 +27,11 @@ namespace Lobby
         [SerializeField] private Transform UIPlayerParent;
 
         [SerializeField] private GameObject UIPlayerPrefab;
+
+        [SerializeField] private Text matchIDText;
+        
+        [SerializeField] GameObject beginGameButton;
+
         
         
 
@@ -51,6 +56,8 @@ namespace Lobby
                 lobbyCanvas.enabled = true;
                 
                 SpawnerPlayerUIPrefab(Player.localPlayer);
+                matchIDText.text = Player.localPlayer.matchID;
+                beginGameButton.SetActive(true);
             }
             else
             {
@@ -74,9 +81,10 @@ namespace Lobby
         {
             if (success)
             {
-                lobbyCanvas.enabled = true;
+                lobbyCanvas.enabled = true; 
                 
                 SpawnerPlayerUIPrefab(Player.localPlayer);
+                matchIDText.text = Player.localPlayer.matchID;
             }
             else
             {
@@ -86,10 +94,17 @@ namespace Lobby
             }
         }
 
-        public void SpawnerPlayerUIPrefab(Player player)
+        public GameObject SpawnerPlayerUIPrefab (Player player) {
+            GameObject newUIPlayer = Instantiate (UIPlayerPrefab, UIPlayerParent);
+            newUIPlayer.GetComponent<UIPlayer> ().SetPlayer (player);
+            newUIPlayer.transform.SetSiblingIndex (player.playerIndex - 1);
+
+            return newUIPlayer;
+        }
+
+        public void BeginGame()
         {
-            GameObject newUIPlayer = Instantiate(UIPlayerPrefab, UIPlayerParent);
-            newUIPlayer.GetComponent<UIPlayer>().SetPlayer(player);
+            Player.localPlayer.BeginGame();
         }
 
     }
