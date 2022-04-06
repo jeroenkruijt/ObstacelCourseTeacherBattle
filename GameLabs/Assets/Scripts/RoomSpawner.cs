@@ -6,6 +6,8 @@ namespace Scripts
 {
     public class RoomSpawner : MonoBehaviour
     {
+        //the old script for spawning rooms, it has been replaced by roomspawner2electricboogaloo
+
         private RoomTemplates templates;
         private int seed;
         //private bool spawned = false;

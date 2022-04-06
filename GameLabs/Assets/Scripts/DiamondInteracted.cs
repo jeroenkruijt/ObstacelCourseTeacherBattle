@@ -6,6 +6,7 @@ namespace Scripts
 {
     public class DiamondInteracted : MonoBehaviour
     {
+        //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
         GameObject culprit;
 

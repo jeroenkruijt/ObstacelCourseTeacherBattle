@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
+    //old script, most of this is transferred into the "managerofgame" script for easier linking of gamestate to time
+
+
     public float timeValue = 300;
     public Text timerText;
   

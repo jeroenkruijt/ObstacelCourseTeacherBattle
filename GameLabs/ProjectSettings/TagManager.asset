@@ -8,6 +8,10 @@ TagManager:
   - Interactable
   - Enemy
   - attack
+  - manager
+  - roomGenerator
+  - Team1Player
+  - Team2Player
   layers:
   - Default
   - TransparentFX

@@ -6,11 +6,13 @@ namespace Scripts
 {
     public class pressurePlate : MonoBehaviour
     {
+        //attach a box to the pressure plate to move
         [SerializeField]
         private GameObject connectedBox;
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            //if a player steps on this call the attached box' move function
+            if (other.CompareTag("Team1Player") || other.CompareTag("Team2Player"))
             {
                 moveable connected = connectedBox.GetComponent<moveable>();
                 connected.SendMessage("move");
