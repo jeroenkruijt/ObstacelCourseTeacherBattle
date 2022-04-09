@@ -12,7 +12,7 @@ namespace Scripts
         public void OnTriggerEnter2D(Collider2D other)
         {
             //if a player steps on this call the attached box' move function
-            if (other.CompareTag("Team1Player") || other.CompareTag("Team2Player"))
+            if (other.CompareTag("Player"))
             {
                 moveable connected = connectedBox.GetComponent<moveable>();
                 connected.SendMessage("move");

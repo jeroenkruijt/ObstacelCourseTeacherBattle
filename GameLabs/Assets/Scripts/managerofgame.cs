@@ -12,11 +12,6 @@ public class managerofgame : MonoBehaviour
     public int progressScore1 = 0;
     [SerializeField]
     private int progressScore2 = 0;
-    [SerializeField]
-    private GameObject ProgressBar1;
-    [SerializeField]
-    private GameObject ProgressBar2;
-    private Vector3 placement;
     public float timeValue = 300;
     public Text timerText;
     private bool overtime = false;
@@ -27,6 +22,7 @@ public class managerofgame : MonoBehaviour
     public int readyTeams;
     public GameObject[] Rooms;
     [SerializeField]
+    private GameObject[] progressbars;
     public List<GameObject> roomgens;
     public List<int> pastseeds;
     private bool checkFailed;
@@ -124,11 +120,10 @@ public class managerofgame : MonoBehaviour
     {
         //called by the progress trackers if one of them is touched by a player from team 1
         //ups the score by one, sets a coordinate for a piece of progressbar to display, then places it
-        progressScore1++;
-        float xcoord = (progressScore1 * 0.4f) - 4f;
-        placement = new Vector3(xcoord, 13, 0);
-        Instantiate(ProgressBar1, placement, ProgressBar1.transform.rotation);
+        progressScore1++;       
         Debug.Log("Team One has progressed " + progressScore1 + " Room(s)");
+        Image image = progressbars[progressScore1-1].GetComponent<Image>();
+        image.enabled = true;
         //if team 1 has 10 points, the game ends
         if (overtime || progressScore1 == 10)
         {
@@ -140,10 +135,9 @@ public class managerofgame : MonoBehaviour
         //called by the progress trackers if one of them is touched by a player from team 2
         //ups the score by one, sets a coordinate for a piece of progressbar to display, then places it
         progressScore2++;
-        float xcoord = (progressScore2 * -0.4f) + 4f;
-        placement = new Vector3(xcoord, 13, 0);
-        Instantiate(ProgressBar2, placement, ProgressBar2.transform.rotation);
         Debug.Log("Team Two has progressed " + progressScore2 + " Room(s)");
+        Image image = progressbars[8 - progressScore2].GetComponent<Image>();
+        image.enabled = true;
         //if team 2 has 10 points, the game ends
         if (overtime || progressScore2 == 10)
         {

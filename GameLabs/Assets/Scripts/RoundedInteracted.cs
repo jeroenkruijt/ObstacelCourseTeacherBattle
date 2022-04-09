@@ -14,8 +14,7 @@ namespace Scripts
         public void Start()
         {
             //find all of the players and add them to the array
-            players = GameObject.FindGameObjectsWithTag("Team1Player");
-            players = GameObject.FindGameObjectsWithTag("Team2Player");
+            players = GameObject.FindGameObjectsWithTag("Player");
 
         }
         public void DoInteraction()

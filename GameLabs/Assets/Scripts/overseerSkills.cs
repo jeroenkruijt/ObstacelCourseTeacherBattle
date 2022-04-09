@@ -14,8 +14,7 @@ public class overseerSkills : MonoBehaviour
     void Start()
     {
         //adds all players to the array
-        players = GameObject.FindGameObjectsWithTag("Team1Player");
-        players = GameObject.FindGameObjectsWithTag("Team2Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
 
     }
 

@@ -20,7 +20,10 @@ namespace Scripts
         int damage = 1;
         [SerializeField]
         private GameObject healthbar;
-
+        [SerializeField]
+        private int team;
+        [SerializeField]
+        private GameObject manager;
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -49,6 +52,12 @@ namespace Scripts
             }
         }
 
+        void progress()
+        {
+            if (team == 1) manager.SendMessage("progress1");
+            else manager.SendMessage("progress2");
+            Debug.Log("sent over progress");
+        }
         void Update()
         {
             //do stuff when you press buttons, interact interacts with the stored object and attack calls the attack function

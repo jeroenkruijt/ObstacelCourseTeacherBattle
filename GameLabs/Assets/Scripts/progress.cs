@@ -8,24 +8,13 @@ public class progress : MonoBehaviour
     // establish connection with the managerofgame
     [SerializeField]
     private bool triggered = false;
-    private GameObject manager;
-    private void Start()
-    {
-        //locate the manager
-        manager = GameObject.Find("managerofgame");
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         //if a player from team 1 enters up team 1's progress
         //if a player from team 2 enters up team 2's progress
-        if (!triggered && other.CompareTag("Team1Player"))
+        if (!triggered && other.CompareTag("Player"))
         {
-            manager.SendMessage("progress1");
-            triggered = true;
-        }
-        else if (!triggered && other.CompareTag("Team2Player"))
-        {
-            manager.SendMessage("progress2");
+            other.SendMessage("progress");
             triggered = true;
         }
     }

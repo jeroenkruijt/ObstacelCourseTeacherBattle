@@ -15,16 +15,10 @@ namespace Scripts
         [SerializeField] private int slimeHealth = 5;
         [SerializeField] private bool takenDamage;
         [SerializeField] private float attackCooldown = 1;
-
-        private void Start()
-        {
-            //find all of the players and add them to the array
-            players = GameObject.FindGameObjectsWithTag("Team1Player");
-            players = GameObject.FindGameObjectsWithTag("Team2Player");
-
-        }
         private void Update()
         {
+            //find all of the players and add them to the array
+            players = GameObject.FindGameObjectsWithTag("Player");
             //set the closestplayer to a nonexistent one with the highest possible distance
             int closestPlayerIndex = -1;
             float distanceMin = float.MaxValue;

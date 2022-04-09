@@ -1148,7 +1148,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8397085394541064440}
-  - component: {fileID: 666541706275919283}
   m_Layer: 0
   m_Name: Room3
   m_TagString: Untagged
@@ -1178,18 +1177,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &666541706275919283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8397085394541064441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc607a751402d574ea8fc3c7d12b6d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8397085394738078421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5165,6 +5152,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: closestPlayer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 886634011082628149, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_Name
       value: slime_0
@@ -5186,6 +5181,10 @@ PrefabInstance:
     - target: {fileID: 1880479233714371696, guid: 84db38d18ca0bba4590b4872693dfbeb, type: 3}
       propertyPath: m_Size.y
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880479233714371696, guid: 84db38d18ca0bba4590b4872693dfbeb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1880479233714371702, guid: 84db38d18ca0bba4590b4872693dfbeb, type: 3}
       propertyPath: m_Name
@@ -5292,6 +5291,14 @@ PrefabInstance:
     - target: {fileID: 886634011082628104, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: closestPlayer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 886634011082628149, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_Name
@@ -5424,6 +5431,14 @@ PrefabInstance:
     - target: {fileID: 886634011082628104, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 886634011082628106, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
+      propertyPath: closestPlayer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 886634011082628149, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_Name
