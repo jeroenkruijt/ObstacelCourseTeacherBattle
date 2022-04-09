@@ -117,15 +117,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886634011082628149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e1c02c1c841c4441a9d4c7bd8b4af59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  closestPlayer: {fileID: 0}
+  closestPlayer: {fileID: 2158247078417867936, guid: 8f087cfc275ab3f4689f35f3814dd2d7, type: 3}
   slimeSpeed: 0.01
   detectionRange: 25
   slimeHealth: 5
   takenDamage: 0
   attackCooldown: 1
+  range: 0

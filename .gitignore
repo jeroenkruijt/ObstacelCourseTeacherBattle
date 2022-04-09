@@ -76,3 +76,5 @@ GameLabs\Logs\
 GameLabs\Temp\
 
 GameLabs/UserSettings/
+
+GameLabs/obj/

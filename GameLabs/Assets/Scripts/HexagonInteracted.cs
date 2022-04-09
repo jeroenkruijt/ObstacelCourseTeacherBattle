@@ -10,10 +10,12 @@ namespace Scripts
         public GameObject[] players;
         GameObject culprit;
 
+
         public void Start()
         {
             players = GameObject.FindGameObjectsWithTag("Player");
         }
+
         public void DoInteraction()
         {
             Debug.Log("OwO I'm a hexagon");
