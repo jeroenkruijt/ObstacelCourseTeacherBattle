@@ -24,6 +24,8 @@ namespace Scripts
         private int team;
         [SerializeField]
         private GameObject manager;
+        [SerializeField]
+        private bool playingPiano = false;
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -58,6 +60,16 @@ namespace Scripts
             else manager.SendMessage("progress2");
             Debug.Log("sent over progress");
         }
+
+        private IEnumerator playPiano()
+        {
+            playingPiano = true;
+            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
+            target.walkSpeed = 0f;
+            yield return new WaitForSeconds(3);
+            playingPiano = false;
+            target.walkSpeed = 4f;
+        }
         void Update()
         {
             //do stuff when you press buttons, interact interacts with the stored object and attack calls the attack function
@@ -69,6 +81,22 @@ namespace Scripts
             if (Input.GetButtonDown("Attack"))
             {
                 StartCoroutine(attack());
+            }
+
+            if (playingPiano)
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyOne");
+                }
+                else if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyTwo");
+                }
+                else if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyThree");
+                }
             }
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)

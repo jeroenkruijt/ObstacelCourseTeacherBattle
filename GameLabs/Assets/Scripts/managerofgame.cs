@@ -136,7 +136,7 @@ public class managerofgame : MonoBehaviour
         //ups the score by one, sets a coordinate for a piece of progressbar to display, then places it
         progressScore2++;
         Debug.Log("Team Two has progressed " + progressScore2 + " Room(s)");
-        Image image = progressbars[8 - progressScore2].GetComponent<Image>();
+        Image image = progressbars[3 + progressScore2].GetComponent<Image>();
         image.enabled = true;
         //if team 2 has 10 points, the game ends
         if (overtime || progressScore2 == 10)
