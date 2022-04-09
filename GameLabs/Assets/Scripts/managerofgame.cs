@@ -24,6 +24,7 @@ public class managerofgame : MonoBehaviour
     private bool timerActive = true;
     public int currentRooms;
     public int seed;
+    public int readyTeams;
     public GameObject[] Rooms;
     [SerializeField]
     public List<GameObject> roomgens;
@@ -32,7 +33,7 @@ public class managerofgame : MonoBehaviour
     void Update()
     {
         //count down the timer and generate seeds
-        timer();
+        if(readyTeams == 2)timer();
         generateSeed();
     }
 
@@ -116,7 +117,7 @@ public class managerofgame : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
-        timerText.text = string.Format("{0:0}  {1:0 0}", minutes, seconds);
+        timerText.text = string.Format("{0:0} {1:00}", minutes, seconds);
 
     }
     void progress1()
