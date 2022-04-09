@@ -6,13 +6,16 @@ namespace Scripts
 {
     public class HexagonInteracted : MonoBehaviour
     {
+        //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
         GameObject culprit;
+
 
         public void Start()
         {
             players = GameObject.FindGameObjectsWithTag("Player");
         }
+
         public void DoInteraction()
         {
             Debug.Log("OwO I'm a hexagon");

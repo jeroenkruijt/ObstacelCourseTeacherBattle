@@ -6,6 +6,7 @@ namespace Scripts
 {
     public class DiamondInteracted : MonoBehaviour
     {
+        //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
         GameObject culprit;
 
@@ -22,7 +23,7 @@ namespace Scripts
                 //if (checker != null)
                 {
                     GameObject checker = target.inRange;
-                    if (checker = gameObject)
+                    if (checker == gameObject)
                     {
                         culprit = players[i];
                     }

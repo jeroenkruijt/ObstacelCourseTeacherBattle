@@ -5,9 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Next room
-  - attack
   - Interactable
   - Enemy
+  - attack
+  - manager
+  - roomGenerator
+  - Team1Player
+  - Team2Player
   layers:
   - Default
   - TransparentFX

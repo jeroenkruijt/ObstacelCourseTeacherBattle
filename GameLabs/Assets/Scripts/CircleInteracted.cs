@@ -6,15 +6,17 @@ namespace Scripts
 {
     public class CircleInteracted : MonoBehaviour
     {
+        //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
         GameObject culprit;
 
         public void Start()
         {
-            players = GameObject.FindGameObjectsWithTag("Player");
+            
         }
         public void DoInteraction()
         {
+            players = GameObject.FindGameObjectsWithTag("Player");
             Debug.Log("OwO I'm a circle");
             for (int i = 0; i < players.Length; i++)
             {
@@ -22,7 +24,7 @@ namespace Scripts
                 //if (checker != null)
                 {
                     GameObject checker = target.inRange;
-                    if (checker = gameObject)
+                    if (checker == gameObject)
                     {
                         culprit = players[i];
                     }

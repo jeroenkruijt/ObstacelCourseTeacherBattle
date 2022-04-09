@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Mirror;
-    
+
 namespace Scripts
 {
-    public class PlayerSideInteraction : NetworkBehaviour
+    public class PlayerSideInteraction : MonoBehaviour
     {
+        //create: gameobject that stores an object for interaction, a gameobject that stores the attack hitbox to instantiate upon attacking, some ints for the stats and a gameobject that links it to the health bar
         [SerializeField]
         public GameObject inRange = null;
         [SerializeField]
@@ -18,17 +18,25 @@ namespace Scripts
         int armor = 0;
         [SerializeField]
         int damage = 1;
+        [SerializeField]
+        private GameObject healthbar;
+        [SerializeField]
+        private int team;
+        [SerializeField]
+        private GameObject manager;
+        [SerializeField]
+        private bool playingPiano = false;
 
-        
         void OnTriggerEnter2D(Collider2D other)
         {
+            //if the player enters an object's interaction range said object is stored to interacti with
             if (other.CompareTag("Interactable"))
             {
-                if (!isLocalPlayer) return;
                 Debug.Log("notices your player UwU");
                 inRange = other.gameObject;
             }
 
+            //if the player comes into contact with an enemy, the enemy's deal damage function is called, damageing the player
             if (other.CompareTag("Enemy"))
             {
                 Debug.Log("hahaha");
@@ -38,19 +46,35 @@ namespace Scripts
         }
         void OnTriggerExit2D(Collider2D other)
         {
+            //if the player leaves an object's interaction range remove it from the storage
             if (other.CompareTag("Interactable") && other.gameObject == inRange)
             {
-                if (!isLocalPlayer) return;
                 Debug.Log("Don't leave me :(");
                 inRange = null;
             }
         }
 
+        void progress()
+        {
+            if (team == 1) manager.SendMessage("progress1");
+            else manager.SendMessage("progress2");
+            Debug.Log("sent over progress");
+        }
+
+        private IEnumerator playPiano()
+        {
+            playingPiano = true;
+            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
+            target.walkSpeed = 0f;
+            yield return new WaitForSeconds(3);
+            playingPiano = false;
+            target.walkSpeed = 4f;
+        }
         void Update()
         {
-            if(Input.GetButtonDown("Interact") && inRange)
+            //do stuff when you press buttons, interact interacts with the stored object and attack calls the attack function
+            if (Input.GetButtonDown("Interact") && inRange)
             {
-                if (!isLocalPlayer) return;
                 inRange.SendMessage("DoInteraction");
             }
 
@@ -59,22 +83,39 @@ namespace Scripts
                 StartCoroutine(attack());
             }
 
+            if (playingPiano)
+            {
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyOne");
+                }
+                else if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyTwo");
+                }
+                else if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRange.SendMessage("KeyThree");
+                }
+            }
+            //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)
             {
-                gameObject.GetComponent<PlayerController>().enabled = false;
+                gameObject.GetComponent<ScuffedPlayerController>().enabled = false;
                 gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
 
                 transform.position = new Vector3(99, 99, 99);
 
-                PlayerController target = gameObject.GetComponent<PlayerController>();
+                ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
                 target.walkSpeed = 0;
             }
         }
 
         public IEnumerator attack()
         {
+            //take the direction from the player controller and create an attack hitbox on that side of the player
             GameObject fist = Instantiate(attackHitbox);
-            PlayerController pointing = gameObject.GetComponent<PlayerController>();
+            ScuffedPlayerController pointing = gameObject.GetComponent<ScuffedPlayerController>();
 
             if (pointing.direction == 0)
             {
@@ -99,16 +140,23 @@ namespace Scripts
 
         public void goFuckYourself()
         {
-            health = health-(3-armor);
+            //take 3 damage but reduce it by the player's armor, then update the healthbar
+            health -= (3 - armor);
+            float healthbarstuff = (0.26f * health);
+            Debug.Log(healthbarstuff);
+            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.2f, 1);
+            healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
         }
 
         public void HealthBuff()
         {
+            //self explanatory
             health++;
         }
 
         public IEnumerator ArmorBuff()
         {
+            //sets an int to the player's armor then gives the player 1 armor. if the player has more armor than before after 5 seconds, 1 armor is removed.
             int preBuffArmor = armor;
             armor++;
             yield return new WaitForSeconds(5);
@@ -120,7 +168,8 @@ namespace Scripts
 
         public IEnumerator SpeedBuff()
         {
-            PlayerController target = gameObject.GetComponent<PlayerController>();
+            // gets a scuffedplayercontroller from the object this is attached to and sets it walkspeed to 10 for 5 seconds, then sets it back to FOUR
+            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
             target.walkSpeed = 10f;
             yield return new WaitForSeconds(5);
             target.walkSpeed = 4f;
@@ -128,6 +177,7 @@ namespace Scripts
 
         public IEnumerator DamageBuff()
         {
+            // same thing as with armor but with damage instead
             int preBuffDamage = damage;
             damage++; 
             yield return new WaitForSeconds(5);

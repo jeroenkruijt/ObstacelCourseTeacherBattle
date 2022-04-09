@@ -7,6 +7,8 @@ namespace Scripts
 {
     public class ScuffedPlayerController : MonoBehaviour
     {
+    //This script only exists for testing purposes - it removes the need for a player to be connected to networkbehaviour
+
     //Components
     Rigidbody2D rb;
     
