@@ -9,10 +9,21 @@ namespace Scripts
         //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
         GameObject culprit;
+        GameObject manager;
+        [SerializeField]
+        private int firstKey;
+        [SerializeField]
+        private int secondKey;
+        [SerializeField]
+        private int thirdKey;
+        [SerializeField]
+        PianoManager managerScript;
 
-        public void Start()
+        void Start()
         {
             players = GameObject.FindGameObjectsWithTag("Player");
+            manager = GameObject.FindGameObjectWithTag("PianoManager");
+            managerScript = manager.GetComponent<PianoManager>();
         }
         public void DoInteraction()
         {
@@ -32,6 +43,18 @@ namespace Scripts
             {
                 culprit.SendMessage("playPiano");
             }
+        }
+        public void KeyOne()
+        {
+            managerScript.playedNotes.Add(firstKey);
+        }
+        public void KeyTwo()
+        {
+            managerScript.playedNotes.Add(secondKey);
+        }
+        public void KeyThree()
+        {
+            managerScript.playedNotes.Add(thirdKey);
         }
 
 

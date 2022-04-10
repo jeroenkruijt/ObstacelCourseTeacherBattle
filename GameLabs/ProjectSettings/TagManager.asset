@@ -12,6 +12,7 @@ TagManager:
   - roomGenerator
   - Team1Player
   - Team2Player
+  - PianoManager
   layers:
   - Default
   - TransparentFX

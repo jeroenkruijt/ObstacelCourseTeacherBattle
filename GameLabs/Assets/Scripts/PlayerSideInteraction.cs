@@ -85,15 +85,15 @@ namespace Scripts
 
             if (playingPiano)
             {
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.R))
                 {
                     inRange.SendMessage("KeyOne");
                 }
-                else if (Input.GetKeyDown(KeyCode.A))
+                else if (Input.GetKeyDown(KeyCode.T))
                 {
                     inRange.SendMessage("KeyTwo");
                 }
-                else if (Input.GetKeyDown(KeyCode.A))
+                else if (Input.GetKeyDown(KeyCode.Y))
                 {
                     inRange.SendMessage("KeyThree");
                 }
