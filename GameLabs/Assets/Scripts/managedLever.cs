@@ -10,12 +10,20 @@ namespace Scripts
         private GameObject leverManager;
         [SerializeField]
         private bool triggered = false;
+        public Animator _anim;
+
+        private void Start()
+        {
+            _anim = GetComponent<Animator>();
+        }
+
         public void DoInteraction()
         {
             if (triggered == false)
             {
                 leverManager.SendMessage("LeverAdded");
                 triggered = true;
+                _anim.SetBool("Interacted", true);
             }
             else
             {
