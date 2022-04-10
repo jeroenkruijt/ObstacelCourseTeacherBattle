@@ -10,6 +10,8 @@ namespace Scripts
         public GameObject[] players;
         GameObject culprit;
 
+        public AudioSource[] soundFX;
+
         public void Start()
         {
             
@@ -18,6 +20,10 @@ namespace Scripts
         {
             players = GameObject.FindGameObjectsWithTag("Player");
             Debug.Log("OwO I'm a circle");
+            
+            //sound
+            soundFX[0].Play();
+            
             for (int i = 0; i < players.Length; i++)
             {
                 PlayerSideInteraction target = players[i].GetComponent<PlayerSideInteraction>();
