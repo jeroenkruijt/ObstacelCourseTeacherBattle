@@ -83,20 +83,20 @@ namespace Scripts
                 StartCoroutine(attack());
             }
 
-            if (playingPiano)
-            {
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    inRange.SendMessage("KeyOne");
-                }
-                else if (Input.GetKeyDown(KeyCode.A))
-                {
-                    inRange.SendMessage("KeyTwo");
-                }
-                else if (Input.GetKeyDown(KeyCode.A))
-                {
-                    inRange.SendMessage("KeyThree");
-                }
+            if (playingPiano)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    inRange.SendMessage("KeyOne");
+                }
+                else if (Input.GetKeyDown(KeyCode.T))
+                {
+                    inRange.SendMessage("KeyTwo");
+                }
+                else if (Input.GetKeyDown(KeyCode.Y))
+                {
+                    inRange.SendMessage("KeyThree");
+                }
             }
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)
