@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class managerofgame : MonoBehaviour
+namespace Scripts
 {
+    public class managerofgame : MonoBehaviour
+{
+    
     //create: two ints to keep track of progress, two blocks to use as a progress bar, a vector to place them accordingly, the time in seconds, a text block to display the time, a bool to initiate overtime
     //an int that holds the number of the winning team, a bool to turn off the timer, an int that keeps track of the amount of rooms in play, an int that tells the roomgenerators what room to load
     //an array of said rooms, a list of the spawnpoints so they can be targeted, a list of past seeds to avoid and a bool to disable the seed checker if the seed is unuseable
@@ -26,10 +29,20 @@ public class managerofgame : MonoBehaviour
     public List<GameObject> roomgens;
     public List<int> pastseeds;
     private bool checkFailed;
-    void Update()
+    [SerializeField]
+    private GameObject[] connectedDoors;
+        void Update()
     {
-        //count down the timer and generate seeds
-        if(readyTeams == 2)timer();
+        //count down the timer and generate seeds;
+        if (readyTeams == 2)
+        {
+            timer();
+            for (int i = 0; i < connectedDoors.Length; i++)
+            {
+                door connected = connectedDoors[i].GetComponent<door>();
+                connected.SendMessage("Open");
+            }
+        }
         generateSeed();
     }
 
@@ -75,7 +88,7 @@ public class managerofgame : MonoBehaviour
                     seedChecker();
                 }
             }
-        }  
+        }
     }
 
     void timer()
@@ -120,12 +133,12 @@ public class managerofgame : MonoBehaviour
     {
         //called by the progress trackers if one of them is touched by a player from team 1
         //ups the score by one, sets a coordinate for a piece of progressbar to display, then places it
-        progressScore1++;       
+        progressScore1++;
         Debug.Log("Team One has progressed " + progressScore1 + " Room(s)");
-        Image image = progressbars[progressScore1-1].GetComponent<Image>();
+        Image image = progressbars[progressScore1 - 1].GetComponent<Image>();
         image.enabled = true;
         //if team 1 has 10 points, the game ends
-        if (overtime || progressScore1 == 10)
+        if (overtime || progressScore1 == 4)
         {
             gameEnd();
         }
@@ -139,7 +152,7 @@ public class managerofgame : MonoBehaviour
         Image image = progressbars[3 + progressScore2].GetComponent<Image>();
         image.enabled = true;
         //if team 2 has 10 points, the game ends
-        if (overtime || progressScore2 == 10)
+        if (overtime || progressScore2 == 4)
         {
             gameEnd();
         }
@@ -167,5 +180,5 @@ public class managerofgame : MonoBehaviour
             Debug.Log("It's a tie!");
         }
     }
-
+}
 }
