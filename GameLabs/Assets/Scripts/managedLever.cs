@@ -29,6 +29,7 @@ namespace Scripts
             {
                 leverManager.SendMessage("LeverRemoved");
                 triggered = false;
+                _anim.SetBool("Interacted", false);
             }
         }
     }
