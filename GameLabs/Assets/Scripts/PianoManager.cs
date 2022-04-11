@@ -16,7 +16,7 @@ namespace Scripts
             door connected = connectedDoor.GetComponent<door>();
             if (playedNotes.Count >= 3)
             {
-                if (playedNotes[0] == 1 && playedNotes[1] == 2 && playedNotes[2] == 3)
+                if (playedNotes[0] == 8 && playedNotes[2] == 10 && playedNotes[2] == 2)
                 {
                     connected.SendMessage("Open");
                     Debug.Log("pling plong");

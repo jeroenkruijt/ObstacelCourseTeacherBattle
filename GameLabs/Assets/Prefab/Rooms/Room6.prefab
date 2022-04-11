@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  firstKey: 2
-  secondKey: 6
-  thirdKey: 10
+  firstKey: 10
+  secondKey: 11
+  thirdKey: 5
   managerScript: {fileID: 0}
 --- !u!61 &6645720554195876730
 BoxCollider2D:
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  firstKey: 3
-  secondKey: 7
-  thirdKey: 11
+  firstKey: 6
+  secondKey: 12
+  thirdKey: 2
   managerScript: {fileID: 0}
 --- !u!61 &7841880321198826155
 BoxCollider2D:
@@ -720,9 +720,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  firstKey: 4
+  firstKey: 7
   secondKey: 8
-  thirdKey: 12
+  thirdKey: 1
   managerScript: {fileID: 0}
 --- !u!61 &3073555886511310926
 BoxCollider2D:
@@ -3753,8 +3753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  firstKey: 1
-  secondKey: 5
+  firstKey: 4
+  secondKey: 3
   thirdKey: 9
   managerScript: {fileID: 0}
 --- !u!61 &7878347745206425173
