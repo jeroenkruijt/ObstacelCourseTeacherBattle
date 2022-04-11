@@ -8,6 +8,7 @@ public class AnimationPlayer : MonoBehaviour
     public bool Moving = false;
     private Animator _anim;
     public bool Attacking = false;
+    public bool Interacting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -63,8 +64,18 @@ public class AnimationPlayer : MonoBehaviour
             }
 
         }
+
+        if (Input.GetAxis("Interact") > 0f) //animation for interaction
+        {
+            Interacting = true;
+            if (Interacting)
+            {
+                _anim.SetBool("Interacting", true);
+            }
+
+        }
     }
-    
+
     private void ifMoving() //used for checking if should be idle or not
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)

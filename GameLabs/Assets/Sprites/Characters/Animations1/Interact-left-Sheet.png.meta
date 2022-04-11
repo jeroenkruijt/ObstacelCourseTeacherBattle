@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: f46809ce724e3fb4dac7194cb5cdc6f4
+guid: d1dff42e6a538c245bf0cc7fa770b4c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4454914845596493489
-    second: Lever_0
+      213: -6731826127359645204
+    second: Interact-left-Sheet_0
   - first:
-      213: 1694985531360637023
-    second: Lever_1
+      213: -154529326007890029
+    second: Interact-left-Sheet_1
   - first:
-      213: -5000633828712076355
-    second: Lever_2
-  - first:
-      213: 4677463211891383850
-    second: Lever_3
+      213: 5623971893440527104
+    second: Interact-left-Sheet_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,29 +96,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lever_0
+      name: Interact-left-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 24
-        height: 24
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +114,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f495b931d86fc22c0800000000000000
-      internalID: -4454914845596493489
+      spriteID: ce9e80dcdcfb392a0800000000000000
+      internalID: -6731826127359645204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_1
+      name: Interact-left-Sheet_1
       rect:
         serializedVersion: 2
         x: 24
         y: 0
         width: 24
-        height: 24
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f507d204c5cc58710800000000000000
-      internalID: 1694985531360637023
+      spriteID: 39f4bef85600bddf0800000000000000
+      internalID: -154529326007890029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lever_2
+      name: Interact-left-Sheet_2
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 24
-        height: 24
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbba0dbf60e2a9ab0800000000000000
-      internalID: -5000633828712076355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lever_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2e5eba4200b9e040800000000000000
-      internalID: 4677463211891383850
+      spriteID: 00bbd47d3ac5c0e40800000000000000
+      internalID: 5623971893440527104
       vertices: []
       indices: 
       edges: []
