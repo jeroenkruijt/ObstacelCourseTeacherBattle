@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2398303721102520935
 Transform:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3607029789877516699
 Transform:
   m_ObjectHideFlags: 0
@@ -7616,7 +7616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6625624658296600896
 Transform:
   m_ObjectHideFlags: 0
@@ -7888,7 +7888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &560507245371997475
 Transform:
   m_ObjectHideFlags: 0
@@ -9237,6 +9237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leverManager: {fileID: 5613093877373958141}
   triggered: 0
+  _anim: {fileID: 0}
 --- !u!1001 &2352861720209965955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9319,6 +9320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leverManager: {fileID: 5613093877373958141}
   triggered: 0
+  _anim: {fileID: 0}
 --- !u!1001 &2465687766631156843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10470,6 +10472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leverManager: {fileID: 5613093877373958141}
   triggered: 0
+  _anim: {fileID: 0}
 --- !u!1001 &5474845397414401191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11936,6 +11939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leverManager: {fileID: 5613093877373958141}
   triggered: 0
+  _anim: {fileID: 0}
 --- !u!1001 &8808472472605628428
 PrefabInstance:
   m_ObjectHideFlags: 0

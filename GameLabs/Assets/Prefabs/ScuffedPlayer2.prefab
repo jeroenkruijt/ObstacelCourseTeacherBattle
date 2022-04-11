@@ -144,7 +144,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2928918}
+  m_Offset: {x: 0, y: -0.90047646}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -155,7 +155,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.6642164}
+  m_Size: {x: 0.75, y: 0.18454361}
   m_EdgeRadius: 0
 --- !u!114 &5562814611637695998
 MonoBehaviour:
@@ -189,6 +189,7 @@ MonoBehaviour:
   Walking: 0
   Moving: 0
   Attacking: 0
+  Interacting: 0
 --- !u!114 &5562814611637695995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,13 +219,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be4e46614654f5459e902c4ccb86bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
   inRange: {fileID: 0}
   attackHitbox: {fileID: 4740279477199393265, guid: 167f3335d57baca4a83e0610c1f077c8, type: 3}
   health: 5
   armor: 0
   damage: 1
+  healthbar: {fileID: 0}
+  team: 0
+  manager: {fileID: 0}
+  playingPiano: 0
 --- !u!1 &5562814613413384048
 GameObject:
   m_ObjectHideFlags: 0
