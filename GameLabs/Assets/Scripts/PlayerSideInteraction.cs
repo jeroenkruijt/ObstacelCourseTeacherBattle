@@ -83,20 +83,30 @@ namespace Scripts
                 StartCoroutine(attack());
             }
 
-            if (playingPiano)
-            {
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    inRange.SendMessage("KeyOne");
-                }
-                else if (Input.GetKeyDown(KeyCode.T))
-                {
-                    inRange.SendMessage("KeyTwo");
-                }
-                else if (Input.GetKeyDown(KeyCode.Y))
-                {
-                    inRange.SendMessage("KeyThree");
-                }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    EnemyAI enemyscript = enemies[i].GetComponent<EnemyAI>();
+                    enemyscript.enabled = false;
+                }
+            }
+
+            if (playingPiano)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    inRange.SendMessage("KeyOne");
+                }
+                else if (Input.GetKeyDown(KeyCode.T))
+                {
+                    inRange.SendMessage("KeyTwo");
+                }
+                else if (Input.GetKeyDown(KeyCode.Y))
+                {
+                    inRange.SendMessage("KeyThree");
+                }
             }
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)
@@ -144,7 +154,7 @@ namespace Scripts
             health -= (3 - armor);
             float healthbarstuff = (0.26f * health);
             Debug.Log(healthbarstuff);
-            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.2f, 1);
+            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.1f, 1);
             healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
         }
 

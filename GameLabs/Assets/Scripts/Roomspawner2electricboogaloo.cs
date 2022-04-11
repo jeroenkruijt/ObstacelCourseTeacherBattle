@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace scripts {
+namespace Scripts {
 public class Roomspawner2electricboogaloo : MonoBehaviour
 {
         //need a gameobject and a managerofgame script to pull from it
