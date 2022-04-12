@@ -57,6 +57,11 @@ namespace Scripts
         {
             RestartLevel();
         }
+
+        if (Input.GetKeyDown("l"))
+        {
+            CloseApplication();
+        }
            
     }
 
@@ -83,6 +88,11 @@ namespace Scripts
     void RestartLevel() //Restarts the level
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
+
+    void CloseApplication() // Closes the application
+    {
+        Application.Quit();
     }
 }
 }

@@ -46,15 +46,29 @@ namespace Scripts
         }
         public void KeyOne()
         {
+            ClearPiano();
             managerScript.playedNotes.Add(firstKey);
         }
         public void KeyTwo()
         {
+            ClearPiano();
+
             managerScript.playedNotes.Add(secondKey);
         }
         public void KeyThree()
         {
+            ClearPiano();
             managerScript.playedNotes.Add(thirdKey);
+        }
+
+        private void ClearPiano()
+        {
+            if (managerScript.playedNotes.Count >= 3)
+            {              
+                managerScript.playedNotes.Remove(managerScript.playedNotes[2]);
+                managerScript.playedNotes.Remove(managerScript.playedNotes[1]);
+                managerScript.playedNotes.Remove(managerScript.playedNotes[0]);
+            }
         }
 
 

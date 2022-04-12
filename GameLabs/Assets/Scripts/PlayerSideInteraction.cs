@@ -66,7 +66,7 @@ namespace Scripts
             playingPiano = true;
             ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
             target.walkSpeed = 0f;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(1.5f);
             playingPiano = false;
             target.walkSpeed = 4f;
         }
@@ -83,15 +83,15 @@ namespace Scripts
                 StartCoroutine(attack());
             }
 
-            if (Input.GetKeyDown(KeyCode.K))
-            {
-                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                for (int i = 0; i < enemies.Length; i++)
-                {
-                    EnemyAI enemyscript = enemies[i].GetComponent<EnemyAI>();
-                    enemyscript.enabled = false;
-                }
-            }
+            //if (Input.GetKeyDown(KeyCode.K))
+            //{
+            //    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            //    for (int i = 0; i < enemies.Length; i++)
+            //    {
+            //        EnemyAI enemyscript = enemies[i].GetComponent<EnemyAI>();
+            //        enemyscript.enabled = false;
+            //    }
+            //}
 
             if (playingPiano)
             {
