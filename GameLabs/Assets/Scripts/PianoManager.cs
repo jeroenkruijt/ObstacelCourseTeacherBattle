@@ -14,7 +14,7 @@ namespace Scripts
         {
             //get the door script and tell it to open or close
             door connected = connectedDoor.GetComponent<door>();
-                if (playedNotes[0] == 8 && playedNotes[1] == 10 && playedNotes[2] == 2)
+                if (playedNotes.Count == 3 && playedNotes[0] == 8 && playedNotes[1] == 10 && playedNotes[2] == 2)
                 {
                     connected.SendMessage("Open");
                     Debug.Log("pling plong");
