@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class overseerSkills : MonoBehaviour
 {
@@ -40,6 +41,25 @@ public class overseerSkills : MonoBehaviour
         {
             StartCoroutine(sendSpeedBuff());
         }
+        if (Input.GetKeyDown("p"))
+        {
+            RestartLevel();
+        }
+
+        if (Input.GetKeyDown("l"))
+        {
+            CloseApplication();
+        }
+    }
+
+    void RestartLevel() //Restarts the level
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void CloseApplication() // Closes the application
+    {
+        Application.Quit();
     }
 
     private IEnumerator sendHealthBuff()
