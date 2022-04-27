@@ -26,6 +26,12 @@ namespace Scripts
         private GameObject manager;
         [SerializeField]
         private bool playingPiano = false;
+        ScuffedPlayerController controller;
+
+        private void Start()
+        {
+             controller = gameObject.GetComponent<ScuffedPlayerController>();
+        }
 
         void OnTriggerEnter2D(Collider2D other)
         {
@@ -61,14 +67,11 @@ namespace Scripts
             Debug.Log("sent over progress");
         }
 
-        private IEnumerator playPiano()
+        private void playPiano()
         {
             playingPiano = true;
-            ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
-            target.walkSpeed = 0f;
-            yield return new WaitForSeconds(1.5f);
-            playingPiano = false;
-            target.walkSpeed = 4f;
+            
+            controller.walkSpeed = 0f;
         }
         void Update()
         {
@@ -83,29 +86,41 @@ namespace Scripts
                 StartCoroutine(attack());
             }
 
-            //if (Input.GetKeyDown(KeyCode.K))
-            //{
-            //    GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            //    for (int i = 0; i < enemies.Length; i++)
-            //    {
-            //        EnemyAI enemyscript = enemies[i].GetComponent<EnemyAI>();
-            //        enemyscript.enabled = false;
-            //    }
-            //}
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    EnemyAI enemyscript = enemies[i].GetComponent<EnemyAI>();
+                    enemyscript.enabled = false;
+                }
+            }
 
             if (playingPiano)
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
                     inRange.SendMessage("KeyOne");
+                    playingPiano = false;
+                    controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.T))
                 {
                     inRange.SendMessage("KeyTwo");
+                    playingPiano = false;
+                    controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.Y))
                 {
                     inRange.SendMessage("KeyThree");
+                    playingPiano = false;
+                    controller.walkSpeed = 4f;
+                }
+                else if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    inRange.SendMessage("Exit");
+                    playingPiano = false;
+                    controller.walkSpeed = 4f;
                 }
             }
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)

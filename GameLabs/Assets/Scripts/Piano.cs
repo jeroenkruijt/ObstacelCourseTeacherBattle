@@ -18,12 +18,22 @@ namespace Scripts
         private int thirdKey;
         [SerializeField]
         PianoManager managerScript;
+        [SerializeField]
+        GameObject notesDisplay;
+        SpriteRenderer visibility;
+        [SerializeField]
+        SpriteRenderer borderOne;
+        [SerializeField]
+        SpriteRenderer borderTwo;
+        [SerializeField]
+        SpriteRenderer borderThree;
 
         void Start()
         {
             players = GameObject.FindGameObjectsWithTag("Player");
             manager = GameObject.FindGameObjectWithTag("PianoManager");
             managerScript = manager.GetComponent<PianoManager>();
+            visibility = notesDisplay.GetComponent<SpriteRenderer>();
         }
         public void DoInteraction()
         {
@@ -38,27 +48,45 @@ namespace Scripts
                         culprit = players[i];
                     }
                 }
+            visibility.enabled = true;
             }
             if (culprit != null)
             {
                 culprit.SendMessage("playPiano");
             }
         }
-        public void KeyOne()
+        public IEnumerator KeyOne()
         {
             ClearPiano();
             managerScript.playedNotes.Add(firstKey);
+            borderOne.enabled = true;
+            yield return new WaitForSeconds(1.5f);
+            borderOne.enabled = false;
+            visibility.enabled = false;
         }
-        public void KeyTwo()
+        public IEnumerator KeyTwo()
         {
             ClearPiano();
-
             managerScript.playedNotes.Add(secondKey);
+            borderTwo.enabled = true;
+            yield return new WaitForSeconds(1.5f);
+            borderTwo.enabled = false;
+            visibility.enabled = false;
         }
-        public void KeyThree()
+
+        public IEnumerator KeyThree()
         {
             ClearPiano();
             managerScript.playedNotes.Add(thirdKey);
+            borderThree.enabled = true;
+            yield return new WaitForSeconds(1.5f);
+            borderThree.enabled = false;
+            visibility.enabled = false;
+        }
+
+        public void Exit()
+        {
+            visibility.enabled = false;
         }
 
         private void ClearPiano()
