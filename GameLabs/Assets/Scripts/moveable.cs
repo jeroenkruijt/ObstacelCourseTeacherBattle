@@ -10,10 +10,10 @@ namespace Scripts
         //create a vector to move the gameobject
         [SerializeField]
         [Range(-1, 1)]
-        private int moveHorizontal;
+        public int moveHorizontal;
         [SerializeField]
         [Range(-1, 1)]
-        private int moveVertical;
+        public int moveVertical;
         private Vector3 targetPos;
 
         private void move()
