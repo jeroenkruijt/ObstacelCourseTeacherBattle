@@ -8,6 +8,13 @@ namespace Scripts {
     {
         [SerializeField]
         private bool triggered = false;
+        public Animator _anim;
+
+        private void Start()
+        {
+            _anim = GetComponent<Animator>();
+        }
+
         public void DoInteraction()
         {
             GameObject manager = GameObject.FindGameObjectWithTag("manager");
@@ -16,11 +23,13 @@ namespace Scripts {
             {
                 managerscript.readyTeams++;
                 triggered = true;
+                _anim.SetBool("Interacted", true);
             }
             else
             {
                 managerscript.readyTeams--;
                 triggered = false;
+                _anim.SetBool("Interacted", false);
             }
         }
     }

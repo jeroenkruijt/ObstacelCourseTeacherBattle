@@ -237,7 +237,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7906146132943427310}
-  - component: {fileID: 6233677111336313027}
   m_Layer: 0
   m_Name: RoomEnd
   m_TagString: Untagged
@@ -262,18 +261,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6233677111336313027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2344474815304060205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc607a751402d574ea8fc3c7d12b6d54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2606825863007085946
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,8 +1852,8 @@ Tilemap:
   - first: {x: -15, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4096,11 +4083,11 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 17
     m_Data: {fileID: 11400000, guid: 9f5ff47700d857f44a3915003e0009af, type: 2}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 11400000, guid: fea388da687af4a47a0ce28964042f15, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 3b40fd6b41395e944b35c11cc890239d, type: 2}
-  - m_RefCount: 259
+  - m_RefCount: 260
     m_Data: {fileID: 11400000, guid: 0fcc5119528800843bb9448557c3c586, type: 2}
   - m_RefCount: 9
     m_Data: {fileID: 11400000, guid: 6cb1dfd307069024d828ff6626f2c933, type: 2}
@@ -4113,11 +4100,11 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 17
     m_Data: {fileID: -7590199251340316998, guid: 0cd1c25ff6705714488ebad69d3fffc8, type: 3}
-  - m_RefCount: 21
+  - m_RefCount: 20
     m_Data: {fileID: 6614055050375729559, guid: 0cd1c25ff6705714488ebad69d3fffc8, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 2561687700879683157, guid: 0cd1c25ff6705714488ebad69d3fffc8, type: 3}
-  - m_RefCount: 259
+  - m_RefCount: 260
     m_Data: {fileID: -8818567009366225235, guid: 0cd1c25ff6705714488ebad69d3fffc8, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 4742491460071160548, guid: 0cd1c25ff6705714488ebad69d3fffc8, type: 3}
@@ -4379,7 +4366,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.49523258}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4390,7 +4377,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3}
+  m_Size: {x: 1, y: 2.0095348}
   m_EdgeRadius: 0
 --- !u!1 &6369087730876743395
 GameObject:
