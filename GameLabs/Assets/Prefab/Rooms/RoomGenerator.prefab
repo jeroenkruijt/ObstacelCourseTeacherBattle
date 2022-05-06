@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2673791160479098973}
   m_Layer: 0
   m_Name: RoomGenerator
-  m_TagString: Untagged
+  m_TagString: roomGenerator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,11 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e53739b99c42e4fba4f78b7d1cfcdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rooms:
-  - {fileID: 7370707068417066700, guid: dc2c0637ae7aacd4cb80f590180fab17, type: 3}
-  - {fileID: 6778046775696669655, guid: 4b453cda838b99b429ffbfb5d51005ea, type: 3}
-  - {fileID: 8397085394541064441, guid: 02d707d95bb4c5c4c97e2eaa5be4286e, type: 3}
-  - {fileID: 6943634760587664128, guid: 12a9c35572b89d342b85b938a0123e39, type: 3}
-  - {fileID: 6119184196037934063, guid: 516dce09995cae94abdca9f549bfe54d, type: 3}
-  - {fileID: 1443991011927575040, guid: 43c3531a65fffb14f9f861680cc5d203, type: 3}
-  - {fileID: 2344474815304060205, guid: 0c99429b88c2af147af2e891ae0b59b3, type: 3}
+  dragmanagerhere: {fileID: 0}

@@ -1,22 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class overseerSkills : MonoBehaviour
 {
+    //create an array of players and some bools to indicate whether or not a buff is ready for use
     [SerializeField] private GameObject[] players;
-    private GameObject target;
+    //private GameObject target;
     bool healthUseable = true;
     bool armorUseable = true;
     bool damageUseable = true;
     bool speedUseable = true;
     void Start()
     {
+        //adds all players to the array
         players = GameObject.FindGameObjectsWithTag("Player");
+
     }
 
     private void Update()
     {
+        //calls a function based on the button pressed (alpha means number on the keyboard, so its numbers 1-4)
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             StartCoroutine(sendHealthBuff());
@@ -36,10 +41,30 @@ public class overseerSkills : MonoBehaviour
         {
             StartCoroutine(sendSpeedBuff());
         }
+        if (Input.GetKeyDown("p"))
+        {
+            RestartLevel();
+        }
+
+        if (Input.GetKeyDown("l"))
+        {
+            CloseApplication();
+        }
+    }
+
+    void RestartLevel() //Restarts the level
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void CloseApplication() // Closes the application
+    {
+        Application.Quit();
     }
 
     private IEnumerator sendHealthBuff()
     { 
+        // if the healthbuff is useable it is called in PlayerSideInteraction, then set to non-useable for 5 seconds
         if (healthUseable == true)
         {
             for (int i = 0; i < players.Length; i++)
@@ -54,6 +79,7 @@ public class overseerSkills : MonoBehaviour
 
     private IEnumerator sendArmorBuff()
     {
+        // if the armorbuff is useable it is called in PlayerSideInteraction, then set to non-useable for 5 seconds
         if (armorUseable == true)
         {
             for (int i = 0; i < players.Length; i++)
@@ -70,6 +96,7 @@ public class overseerSkills : MonoBehaviour
     {
         if (damageUseable == true)
         {
+            // if the damagebuff is useable it is called in PlayerSideInteraction, then set to non-useable for 5 seconds
             for (int i = 0; i < players.Length; i++)
             {
                 players[i].SendMessage("DamageBuff");
@@ -84,6 +111,7 @@ public class overseerSkills : MonoBehaviour
     {
         if (speedUseable == true)
         {
+            // if the speedbuff is useable it is called in PlayerSideInteraction, then set to non-useable for 5 seconds
             for (int i = 0; i < players.Length; i++)
             {
                 players[i].SendMessage("SpeedBuff");

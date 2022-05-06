@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace scripts {
+namespace Scripts {
 public class Roomspawner2electricboogaloo : MonoBehaviour
 {
-        private int seed;
+        //need a gameobject and a managerofgame script to pull from it
         [SerializeField]
-        private GameObject[] Rooms;
+        private GameObject dragmanagerhere;
+        managerofgame manager;
         private void Start()
-    {
-            if (badidea.currentRooms < 10)
-            {
-                seed = Random.Range(0, Rooms.Length - 1);
-            }
-            else
-            {
-                seed = Rooms.Length - 1;
-            }
-            Instantiate(Rooms[seed], transform.position, Rooms[seed].transform.rotation);
-            badidea.currentRooms++;
+        {
+            //establish communication with the managerofgame, get the managerofgame object, get the script and tell it "hey I exist", respectively
+            dragmanagerhere = GameObject.FindGameObjectWithTag("manager");
+            manager = dragmanagerhere.GetComponent<managerofgame>();
+            manager.roomgens.Add(this.gameObject);
+        }
 
+        void Fire()
+        {
+            //actually generate a room and destroy the room spawnpoint to prevent further rooms from generating here
+            Instantiate(manager.Rooms[manager.seed], transform.position, manager.Rooms[manager.seed].transform.rotation);
+            //add it to the rooms so we can put a cap on them
+            manager.currentRooms++;
+            Destroy(this.gameObject);
         }
 
     }

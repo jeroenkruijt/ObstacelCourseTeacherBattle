@@ -2,11 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Scripts
 {
     public class ScuffedPlayerController : MonoBehaviour
     {
+    //This script only exists for testing purposes - it removes the need for a player to be connected to networkbehaviour
+
     //Components
     Rigidbody2D rb;
     
@@ -34,24 +37,33 @@ namespace Scripts
         inputHorizontal = Input.GetAxisRaw("Horizontal");
         inputVertical = Input.GetAxisRaw("Vertical");
 
-            if (inputHorizontal == 1)
-            {
+        if (inputHorizontal == 1) {
                 direction = 0;
-            }
-            else if (inputHorizontal == -1)
-            {
-                direction = 1;
-            }
-            else if (inputVertical == 1)
-            {
-                direction = 2;          
-            }
-            else if (inputVertical == -1)
-            {
-                direction = 3;            
-            }
-           
         }
+        else if (inputHorizontal == -1)
+        {
+                direction = 1;
+        }
+        else if (inputVertical == 1)
+        {
+                direction = 2;          
+        }
+        else if (inputVertical == -1)
+        {
+                direction = 3;            
+        }
+
+        if (Input.GetKeyDown("p"))
+        {
+            RestartLevel();
+        }
+
+        if (Input.GetKeyDown("l"))
+        {
+            CloseApplication();
+        }
+           
+    }
 
     void FixedUpdate()
     {
@@ -71,6 +83,16 @@ namespace Scripts
                         rb.velocity = new Vector2(0f, 0f);
         }
         
+    }
+    
+    void RestartLevel() //Restarts the level
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
+
+    void CloseApplication() // Closes the application
+    {
+        Application.Quit();
     }
 }
 }

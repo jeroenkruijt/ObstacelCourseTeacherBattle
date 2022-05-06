@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class progress : MonoBehaviour
 {
+    // create a bool to see if this room has been counted in progress to prevent people from just walking in and out to get progress
+    // establish connection with the managerofgame
     [SerializeField]
     private bool triggered = false;
-    private GameObject manager;
-    private void Start()
-    {
-        manager = GameObject.Find("managerofgame");
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && triggered == false)
+        //if a player from team 1 enters up team 1's progress
+        //if a player from team 2 enters up team 2's progress
+        if (!triggered && other.CompareTag("Player"))
         {
-            manager.SendMessage("progress1");
+            other.SendMessage("progress");
             triggered = true;
         }
     }

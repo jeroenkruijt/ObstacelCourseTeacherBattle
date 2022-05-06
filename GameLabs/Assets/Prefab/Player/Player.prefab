@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3451640887165513442}
   - component: {fileID: 3451640887165513443}
-  - component: {fileID: 3451640887165513440}
   - component: {fileID: 3451640887165513441}
+  - component: {fileID: 1018940703482945613}
   - component: {fileID: 3646746718913063224}
   - component: {fileID: -7504799857312186881}
   - component: {fileID: -6446685130100746343}
@@ -88,26 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3451640887165513440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3451640887165513470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9b9e235c6fa2e40a86a2528cfc769d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  walkSpeed: 4
-  speedLimit: 0.7
-  inputHorizontal: 0
-  inputVertical: 0
-  direction: 0
-  fellowcam: {fileID: 0}
 --- !u!50 &3451640887165513441
 Rigidbody2D:
   serializedVersion: 4
@@ -129,6 +109,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1018940703482945613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451640887165513470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07de924997cee214680461082ba42e92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  walkSpeed: 4
+  speedLimit: 0.7
+  inputHorizontal: 0
+  inputVertical: 0
+  direction: 0
+  fellowcam: {fileID: 0}
 --- !u!114 &3646746718913063224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ MonoBehaviour:
   syncInterval: 0.1
   inRange: {fileID: 0}
   attackHitbox: {fileID: 4740279477199393265, guid: 167f3335d57baca4a83e0610c1f077c8, type: 3}
-  health: 50
+  health: 5
   armor: 0
   damage: 1
 --- !u!61 &5966521263417814165
