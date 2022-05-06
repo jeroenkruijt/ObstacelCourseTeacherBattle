@@ -42,7 +42,7 @@ namespace Scripts
                 target.thirdKey = divideNotes[i + 8];
             }
 
-            for (int i = 0; i < Random.Range(1, 100); i++)
+            for (int i = 0; i < correctNotes.Length; i++)
             {
                 correctNotes[i] = Random.Range(1, 12);               
             }
