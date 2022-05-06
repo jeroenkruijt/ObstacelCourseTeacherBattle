@@ -16,21 +16,47 @@ namespace Scripts
         [SerializeField]
         PianoManager managerScript;
         [SerializeField]
-        GameObject notesDisplay;
+        GameObject[] notesDisplay;
         SpriteRenderer visibility;
-        [SerializeField]
-        SpriteRenderer borderOne;
-        [SerializeField]
-        SpriteRenderer borderTwo;
-        [SerializeField]
-        SpriteRenderer borderThree;
+        //[SerializeField]
+        //SpriteRenderer borderOne;
+        //[SerializeField]
+        //SpriteRenderer borderTwo;
+        //[SerializeField]
+        //SpriteRenderer borderThree;   
 
         void Start()
         {
             players = GameObject.FindGameObjectsWithTag("Player");
             manager = GameObject.FindGameObjectWithTag("PianoManager");
             managerScript = manager.GetComponent<PianoManager>();
-            visibility = notesDisplay.GetComponent<SpriteRenderer>();
+            noSprites();
+        }
+
+        void setSprites()
+        {
+            for (int i = 0; i < notesDisplay.Length; i++)
+            {
+                visibility = notesDisplay[i].GetComponent<SpriteRenderer>();
+                visibility.enabled = true;
+            }
+            visibility = notesDisplay[0].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(firstKey*2)-1];
+
+            visibility = notesDisplay[1].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(secondKey*2)+23];
+
+            visibility = notesDisplay[2].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(thirdKey*2)+47];
+        }
+
+        void noSprites()
+        {
+            for (int i = 0; i < notesDisplay.Length; i++)
+            {
+                visibility = notesDisplay[i].GetComponent<SpriteRenderer>();
+                visibility.enabled = false;
+            }
         }
         public void DoInteraction()
         {
@@ -45,7 +71,7 @@ namespace Scripts
                         culprit = players[i];
                     }
                 }
-            visibility.enabled = true;
+                setSprites();
             }
             if (culprit != null)
             {
@@ -54,47 +80,53 @@ namespace Scripts
         }
         public IEnumerator KeyOne()
         {
-            ClearPiano();
+            //ClearPiano();
             managerScript.playedNotes.Add(firstKey);
-            borderOne.enabled = true;
+            //borderOne.enabled = true;
+            visibility = notesDisplay[0].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(firstKey * 2)-2];
             yield return new WaitForSeconds(1.5f);
-            borderOne.enabled = false;
-            visibility.enabled = false;
+            //borderOne.enabled = false;
+            noSprites();
         }
         public IEnumerator KeyTwo()
         {
-            ClearPiano();
+            //ClearPiano();
             managerScript.playedNotes.Add(secondKey);
-            borderTwo.enabled = true;
+            //borderTwo.enabled = true;
+            visibility = notesDisplay[1].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(secondKey * 2) + 22];
             yield return new WaitForSeconds(1.5f);
-            borderTwo.enabled = false;
-            visibility.enabled = false;
+            //borderTwo.enabled = false;
+            noSprites();
         }
 
         public IEnumerator KeyThree()
         {
-            ClearPiano();
+            //ClearPiano();
             managerScript.playedNotes.Add(thirdKey);
-            borderThree.enabled = true;
+            //borderThree.enabled = true;
+            visibility = notesDisplay[2].GetComponent<SpriteRenderer>();
+            visibility.sprite = managerScript.pianoKeySprites[(thirdKey * 2) + 46];
             yield return new WaitForSeconds(1.5f);
-            borderThree.enabled = false;
-            visibility.enabled = false;
+            //borderThree.enabled = false;
+            noSprites();
         }
 
         public void Exit()
         {
-            visibility.enabled = false;
+            noSprites();
         }
 
-        private void ClearPiano()
-        {
-            if (managerScript.playedNotes.Count >= 3)
-            {              
-                managerScript.playedNotes.Remove(managerScript.playedNotes[2]);
-                managerScript.playedNotes.Remove(managerScript.playedNotes[1]);
-                managerScript.playedNotes.Remove(managerScript.playedNotes[0]);
-            }
-        }
+        //private void ClearPiano()
+        //{
+        //    if (managerScript.playedNotes.Count >= 3)
+        //    {              
+        //        managerScript.playedNotes.Remove(managerScript.playedNotes[2]);
+        //        managerScript.playedNotes.Remove(managerScript.playedNotes[1]);
+        //        managerScript.playedNotes.Remove(managerScript.playedNotes[0]);
+        //    }
+        //}
 
 
     }
