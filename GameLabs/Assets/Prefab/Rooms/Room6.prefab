@@ -1587,6 +1587,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connectedDoor: {fileID: 3908634831301252424}
   playedNotes: 
+  possibleNote: 0
+  divideNotes: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  pastNotes: 
+  pianos:
+  - {fileID: 3188186151183741486}
+  - {fileID: 3867479405728703232}
+  - {fileID: 1283921966834050426}
+  - {fileID: 6637169568072937694}
 --- !u!1 &5961730839674510994
 GameObject:
   m_ObjectHideFlags: 0

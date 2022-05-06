@@ -13,9 +13,9 @@ namespace Scripts
     //an array of said rooms, a list of the spawnpoints so they can be targeted, a list of past seeds to avoid and a bool to disable the seed checker if the seed is unuseable
     [SerializeField]
     public int progressScore1 = 0;
-    [SerializeField]
-    private int progressScore2 = 0;
-    public float timeValue = 300;
+    //[SerializeField]
+    //private int progressScore2 = 0;
+    public float timeValue = 0;
     public Text timerText;
     private bool overtime = false;
     private int winningteam;
@@ -30,18 +30,16 @@ namespace Scripts
     public List<int> pastseeds;
     private bool checkFailed;
     [SerializeField]
-    private GameObject[] connectedDoors;
+    private GameObject connectedDoor;
         void Update()
     {
         //count down the timer and generate seeds;
-        if (readyTeams == 2)
+        if (readyTeams == 1)
         {
             timer();
-            for (int i = 0; i < connectedDoors.Length; i++)
-            {
-                door connected = connectedDoors[i].GetComponent<door>();
-                connected.SendMessage("Open");
-            }
+            door connected = connectedDoor.GetComponent<door>();
+            connected.SendMessage("Open");
+
         }
         generateSeed();
     }
@@ -51,14 +49,14 @@ namespace Scripts
         //check if the amount of rooms on one side is 3 (so 6 in total since there are two sides)
         //if not, generate a random seed and check if it has been used before
         //if that is also not the case, generate a room based on the seed
-        if (currentRooms < 6)
+        if (currentRooms < 3)
         {
             seed = Random.Range(0, Rooms.Length - 1);
             seedChecker();
             pastseeds.Add(seed);
         }
         //if there are 3 rooms, generate an endroom instead
-        else if (currentRooms == 6)
+        else if (currentRooms == 3)
         {
             seed = Rooms.Length - 1;
         }
@@ -98,19 +96,20 @@ namespace Scripts
         //send the time over to the display function
         if (timerActive == true)
         {
-            if (timeValue > 0)
-            {
-                timeValue -= Time.deltaTime;
-            }
-            else if (progressScore1 == progressScore2 && overtime == false)
-            {
-                timeValue = 60;
-                overtime = true;
-            }
-            else
-            {
-                gameEnd();
-            }
+                timeValue += Time.deltaTime;
+            //if (timeValue > 0)
+            //{
+            //    timeValue += Time.deltaTime;
+            //}
+            //else if (progressScore1 == progressScore2 && overtime == false)
+            //{
+            //    timeValue = 60;
+            //    overtime = true;
+            //}
+            //else
+            //{
+            //    gameEnd();
+            //}
 
             DisplayTime(timeValue);
         }
@@ -118,10 +117,10 @@ namespace Scripts
     void DisplayTime(float timeToDisplay)
     {
         //recieves the amount of remaining time from the timer, converts it from one value to an amount of minutes and seconds, then formats that and displays it
-        if (timeToDisplay < 0)
-        {
-            timeToDisplay = 0;
-        }
+        //if (timeToDisplay < 0)
+        //{
+        //    timeToDisplay = 0;
+        //}
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
@@ -138,47 +137,48 @@ namespace Scripts
         Image image = progressbars[progressScore1 - 1].GetComponent<Image>();
         image.enabled = true;
         //if team 1 has 10 points, the game ends
-        if (overtime || progressScore1 == 4)
+        if (progressScore1 == 4)
         {
-            gameEnd();
+            readyTeams = 0;
         }
     }
     void progress2()
     {
         //called by the progress trackers if one of them is touched by a player from team 2
         //ups the score by one, sets a coordinate for a piece of progressbar to display, then places it
-        progressScore2++;
-        Debug.Log("Team Two has progressed " + progressScore2 + " Room(s)");
-        Image image = progressbars[3 + progressScore2].GetComponent<Image>();
-        image.enabled = true;
-        //if team 2 has 10 points, the game ends
-        if (overtime || progressScore2 == 4)
-        {
-            gameEnd();
-        }
+        //progressScore2++;
+        //Debug.Log("Team Two has progressed " + progressScore2 + " Room(s)");
+        //Image image = progressbars[3 + progressScore2].GetComponent<Image>();
+        //image.enabled = true;
+        ////if team 2 has 10 points, the game ends
+        //if (overtime || progressScore2 == 4)
+        //{
+        //    gameEnd();
+        //}
     }
 
-    void gameEnd()
-    {
-        //sets the time to 0 then turns it off
-        //checks which team has more points, then updates the winningteam value accordingly
-        timeValue = 0;
-        timerActive = false;
-        if (progressScore1 > progressScore2)
-        {
-            winningteam = 1;
-            Debug.Log("the winning team is team 1 !");
-        }
-        else if (progressScore2 > progressScore1)
-        {
-            winningteam = 2;
-            Debug.Log("the winning team is team 2 !");
-        }
-        else
-        {
-            winningteam = 3;
-            Debug.Log("It's a tie!");
-        }
-    }
+    //void gameEnd()
+    //{
+            //sets the time to 0 then turns it off
+            //checks which team has more points, then updates the winningteam value accordingly
+            //timeValue = 0;
+            //timerActive = false;
+            //if (progressScore1 > progressScore2)
+            //{
+            //    winningteam = 1;
+            //    Debug.Log("the winning team is team 1 !");
+            //}
+            //else if (progressScore2 > progressScore1)
+            //{
+            //    winningteam = 2;
+            //    Debug.Log("the winning team is team 2 !");
+            //}
+            //else
+            //{
+            //    winningteam = 3;
+            //    Debug.Log("It's a tie!");
+            //}
+            
+    //}
 }
 }

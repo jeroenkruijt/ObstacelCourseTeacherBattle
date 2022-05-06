@@ -10,12 +10,9 @@ namespace Scripts
         public GameObject[] players;
         GameObject culprit;
         GameObject manager;
-        [SerializeField]
-        private int firstKey;
-        [SerializeField]
-        private int secondKey;
-        [SerializeField]
-        private int thirdKey;
+        public int firstKey;
+        public int secondKey;
+        public int thirdKey;
         [SerializeField]
         PianoManager managerScript;
         [SerializeField]

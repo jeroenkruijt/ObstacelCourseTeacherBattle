@@ -19,7 +19,7 @@ namespace Scripts
         private void move()
         {
             //move the object based on the values of the slider
-                targetPos = transform.TransformPoint(moveHorizontal, moveVertical, 0);
+                targetPos = transform.TransformPoint(moveHorizontal*2, moveVertical*2, 0);
                 transform.position = Vector3.MoveTowards(transform.position, targetPos, 1); 
         }
     }

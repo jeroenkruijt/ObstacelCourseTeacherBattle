@@ -17,11 +17,11 @@ namespace Scripts {
                 managerscript.readyTeams++;
                 triggered = true;
             }
-            else
-            {
-                managerscript.readyTeams--;
-                triggered = false;
-            }
+            //else
+            //{
+            //    managerscript.readyTeams--;
+            //    triggered = false;
+            //}
         }
     }
 }
