@@ -29,6 +29,8 @@ namespace Scripts
         PlayerControllerNew controller;
         [SerializeField]
         private int deaths;
+        public bool died = false;
+        public bool Respawn = false;
 
         private void Start()
         {
@@ -134,6 +136,7 @@ namespace Scripts
 
         private IEnumerator die()
         {
+            died = true;
             health = 5;
             gameObject.GetComponent<PlayerControllerNew>().enabled = false;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
@@ -146,10 +149,14 @@ namespace Scripts
             yield return new WaitForSeconds(deaths * 5);
             gameObject.GetComponent<PlayerControllerNew>().enabled = true;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = true;
-
+            Respawn = true;
+            died = false;
+            
             transform.position = new Vector3(0, 0, -1);
 
             target.walkSpeed = 4f;
+            yield return new WaitForSeconds(1);
+            Respawn = false;
         }
 
         public IEnumerator attack()

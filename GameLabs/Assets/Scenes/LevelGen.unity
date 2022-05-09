@@ -968,6 +968,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6388579222312990841, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1374274088}
     - target: {fileID: 6388579222312990843, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_Name
       value: ScuffedPlayer2

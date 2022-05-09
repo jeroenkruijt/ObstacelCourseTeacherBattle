@@ -1,96 +1,117 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class AnimationPlayer : MonoBehaviour
-{
-    public int Walking = 0;
-    public bool Moving = false;
-    private Animator _anim;
-    public bool Attacking = false;
-    public bool Interacting = false;
-
-    // Start is called before the first frame update
-    void Start()
+namespace Scripts {
+    public class AnimationPlayer : MonoBehaviour
     {
-        _anim = GetComponent<Animator>();
-    }
+        public int Walking = 0;
+        public bool Moving = false;
+        private Animator _anim;
+        public bool Attacking = false;
+        public bool Interacting = false;
+        PlayerSideInteraction DyingCheck;
+        public bool ded = false;
+        public bool respawn = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        ifMoving();
-
-        if (Input.GetAxis("Horizontal") > 0 && Moving == true) //animation moving right
+        // Start is called before the first frame update
+        void Start()
         {
-            Walking = 1;
-            if (Walking == 1)
-            {
-                _anim.SetInteger("Direction", 0);
-            }
-        }
-        else if (Input.GetAxis("Horizontal") < 0 && Moving == true) //animation moving left
-        {
-            Walking = -1;
-            if (Walking == -1)
-            {
-                _anim.SetInteger("Direction", 1);
-            }
+            DyingCheck = GetComponent<PlayerSideInteraction>();
+            _anim = GetComponent<Animator>();
         }
 
-        if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") < 1 && Input.GetAxis("Horizontal") > -1 && Moving == true) //animation moving up
+        // Update is called once per frame
+        void Update()
         {
-            Walking = 2;
-            if (Walking == 2)
+            ifMoving();
+
+            if (Input.GetAxis("Horizontal") > 0 && Moving == true) //animation moving right
             {
-                _anim.SetInteger("Direction", 2);
+                Walking = 1;
+                if (Walking == 1)
+                {
+                    _anim.SetInteger("Direction", 0);
+                }
             }
-        }
-        else if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") < 1 && Input.GetAxis("Horizontal") > -1 && Moving == true) //animation moving down
-        {
-            Walking = 3;
-            if (Walking == 3)
+            else if (Input.GetAxis("Horizontal") < 0 && Moving == true) //animation moving left
             {
-                _anim.SetInteger("Direction", 3);
-            }
-        }
-        if (Input.GetKeyDown("u")) //animation for attacking
-        {
-            Attacking = true;
-            if (Attacking)
-            {
-                _anim.SetBool("Attacking", true);
+                Walking = -1;
+                if (Walking == -1)
+                {
+                    _anim.SetInteger("Direction", 1);
+                }
             }
 
-        }
-
-        if (Input.GetAxis("Interact") > 0f) //animation for interaction
-        {
-            Interacting = true;
-            if (Interacting)
+            if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") < 1 && Input.GetAxis("Horizontal") > -1 && Moving == true) //animation moving up
             {
-                _anim.SetBool("Interacting", true);
+                Walking = 2;
+                if (Walking == 2)
+                {
+                    _anim.SetInteger("Direction", 2);
+                }
+            }
+            else if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") < 1 && Input.GetAxis("Horizontal") > -1 && Moving == true) //animation moving down
+            {
+                Walking = 3;
+                if (Walking == 3)
+                {
+                    _anim.SetInteger("Direction", 3);
+                }
+            }
+            if (Input.GetKeyDown("u")) //animation for attacking
+            {
+                Attacking = true;
+                if (Attacking)
+                {
+                    _anim.SetBool("Attacking", true);
+                }
+
             }
 
-        }
-    }
-
-    private void ifMoving() //used for checking if should be idle or not
-    {
-        if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-        {
-            Moving = true;
-            if (Moving == true)
+            if (Input.GetAxis("Interact") > 0f) //animation for interaction
             {
-                _anim.SetBool("Moving", true);
+                Interacting = true;
+                if (Interacting)
+                {
+                    _anim.SetBool("Interacting", true);
+                }
+            }
+            if (DyingCheck.died == true)
+            {
+                ded = true;
+                if (ded)
+                {
+                    _anim.SetBool("rudead", true);
+                }
+            }
+        
+            if (DyingCheck.Respawn == true)
+            {
+                respawn = true;
+                if (respawn)
+                {
+                    _anim.SetBool("AliveAgain", true);
+                }
             }
         }
-        else
+
+            private void ifMoving() //used for checking if should be idle or not
         {
-            Moving = false;
-            if (Moving == false)
+            if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             {
-                _anim.SetBool("Moving", false);
+                Moving = true;
+                if (Moving == true)
+                {
+                    _anim.SetBool("Moving", true);
+                }
+            }
+            else
+            {
+                Moving = false;
+                if (Moving == false)
+                {
+                    _anim.SetBool("Moving", false);
+                }
             }
         }
     }
