@@ -26,11 +26,13 @@ namespace Scripts
         private GameObject manager;
         [SerializeField]
         private bool playingPiano = false;
-        ScuffedPlayerController controller;
+        PlayerControllerNew controller;
+        [SerializeField]
+        private int deaths;
 
         private void Start()
         {
-             controller = gameObject.GetComponent<ScuffedPlayerController>();
+             controller = gameObject.GetComponent<PlayerControllerNew>();
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -76,15 +78,15 @@ namespace Scripts
         void Update()
         {
             //do stuff when you press buttons, interact interacts with the stored object and attack calls the attack function
-            if (Input.GetButtonDown("Interact") && inRange)
-            {
-                inRange.SendMessage("DoInteraction");
-            }
+            //if (Input.GetButtonDown("Interact") && inRange)
+            //{
+            //    inRange.SendMessage("DoInteraction");
+            //}
 
-            if (Input.GetButtonDown("Attack"))
-            {
-                StartCoroutine(attack());
-            }
+            //if (Input.GetButtonDown("Attack"))
+            //{
+            //    StartCoroutine(attack());
+            //}
 
             if (Input.GetKeyDown(KeyCode.K))
             {
@@ -126,21 +128,35 @@ namespace Scripts
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)
             {
-                gameObject.GetComponent<ScuffedPlayerController>().enabled = false;
-                gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
-
-                transform.position = new Vector3(99, 99, 99);
-
-                ScuffedPlayerController target = gameObject.GetComponent<ScuffedPlayerController>();
-                target.walkSpeed = 0;
+                StartCoroutine(die());
             }
+        }
+
+        private IEnumerator die()
+        {
+            health = 5;
+            gameObject.GetComponent<PlayerControllerNew>().enabled = false;
+            gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
+
+            transform.position = new Vector3(99, 99, 99);
+
+            PlayerControllerNew target = gameObject.GetComponent<PlayerControllerNew>();
+            target.walkSpeed = 0;
+            deaths++;
+            yield return new WaitForSeconds(deaths * 5);
+            gameObject.GetComponent<PlayerControllerNew>().enabled = true;
+            gameObject.GetComponent<PlayerSideInteraction>().enabled = true;
+
+            transform.position = new Vector3(0, 0, -1);
+
+            target.walkSpeed = 4f;
         }
 
         public IEnumerator attack()
         {
             //take the direction from the player controller and create an attack hitbox on that side of the player
             GameObject fist = Instantiate(attackHitbox);
-            ScuffedPlayerController pointing = gameObject.GetComponent<ScuffedPlayerController>();
+            PlayerControllerNew pointing = gameObject.GetComponent<PlayerControllerNew>();
 
             if (pointing.direction == 0)
             {

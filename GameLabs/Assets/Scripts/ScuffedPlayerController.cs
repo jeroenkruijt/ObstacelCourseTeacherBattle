@@ -21,12 +21,18 @@ namespace Scripts
     public float inputVertical;
     public float direction = 0;
 
+    [SerializeField]
+    public int inputNumber = 0;
+
 
     // Start is called before the first frame update
-    void Start()
+        void Start()
     {
         //gets the rigibody of the gameobject.
-        rb = gameObject.GetComponent<Rigidbody2D>();
+            rb = gameObject.GetComponent<Rigidbody2D>();
+            GameObject playermanager = GameObject.Find("playermanager");
+            playerManager script = playermanager.GetComponent<playerManager>();
+            script.SendMessage("joinPlayer");
     }
 
     // Update is called once per frame
@@ -82,8 +88,13 @@ namespace Scripts
         {
                         rb.velocity = new Vector2(0f, 0f);
         }
-        
-    }
+
+            if (Input.GetButtonDown("Vertical"))
+            {
+                Debug.Log("goin up");
+            }
+
+        }
     
     void RestartLevel() //Restarts the level
     {

@@ -15,7 +15,7 @@ namespace Scripts
         [SerializeField] private int slimeHealth = 5;
         [SerializeField] private bool takenDamage;
         [SerializeField] private float attackCooldown = 1;
-        private void Update()
+        private void FixedUpdate()
         {
             //find all of the players and add them to the array
             players = GameObject.FindGameObjectsWithTag("Player");

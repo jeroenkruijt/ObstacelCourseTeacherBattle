@@ -54,8 +54,7 @@ public class AnimationPlayer : MonoBehaviour
                 _anim.SetInteger("Direction", 3);
             }
         }
-
-        if (Input.GetAxis("Attack") > 0f) //animation for attacking
+        if (Input.GetKeyDown("u")) //animation for attacking
         {
             Attacking = true;
             if (Attacking)

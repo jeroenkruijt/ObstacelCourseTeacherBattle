@@ -31,6 +31,8 @@ namespace Scripts
     private bool checkFailed;
     [SerializeField]
     private GameObject connectedDoor;
+    //[SerializeField]
+    //private GameObject newPlayer;
         void Update()
     {
         //count down the timer and generate seeds;
@@ -42,6 +44,11 @@ namespace Scripts
 
         }
         generateSeed();
+
+            //if (Input.GetKeyDown("j"))
+            //{
+            //    Instantiate (newPlayer);
+            //}
     }
 
     public void generateSeed()
