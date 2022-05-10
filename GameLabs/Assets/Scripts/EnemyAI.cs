@@ -15,6 +15,12 @@ namespace Scripts
         [SerializeField] private int slimeHealth = 5;
         [SerializeField] private bool takenDamage;
         [SerializeField] private float attackCooldown = 1;
+        public Animator _anim;
+
+        private void Start()
+        {
+            _anim = GetComponent<Animator>();
+        }
         private void FixedUpdate()
         {
             //find all of the players and add them to the array
@@ -43,7 +49,12 @@ namespace Scripts
             //if the distance is less that the detection range move towards them
             if (distanceMin <= detectionRange)
             {
+                _anim.SetBool("Moving", true);
                 transform.position = Vector3.MoveTowards(transform.position, closestPlayer.transform.position, slimeSpeed);
+            }
+            else
+            {
+                _anim.SetBool("Moving", false);
             }
         }
 
@@ -57,7 +68,7 @@ namespace Scripts
                 StartCoroutine(takeDamage());
                 if (slimeHealth <= 0)
                 {
-                    Destroy(gameObject);
+                    StartCoroutine(almostDead());
                 }
             }
         }
@@ -88,6 +99,13 @@ namespace Scripts
                 yield return new WaitForSeconds(attackCooldown);
                 Iframes = false;
             }
+        }
+        private IEnumerator almostDead()
+        {
+            _anim.SetBool("Dead", true);
+            slimeSpeed = 0;
+            yield return new WaitForSeconds(1);
+            Destroy(gameObject);
         }
 
     }

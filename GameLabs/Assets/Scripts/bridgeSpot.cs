@@ -12,7 +12,7 @@ namespace Scripts
         {
             if (other.gameObject == correctBox)
             {
-                Debug.Log("faka drerrie");
+                //Debug.Log("faka drerrie");
                 BoxCollider2D collider = gameObject.GetComponent<BoxCollider2D>();
                 collider.enabled = false;
             }
@@ -22,7 +22,7 @@ namespace Scripts
         {
             if (other.gameObject == correctBox)
             {
-                Debug.Log("challas a neef");
+                //Debug.Log("challas a neef");
                 BoxCollider2D collider = gameObject.GetComponent<BoxCollider2D>();
                 collider.enabled = true;
             }

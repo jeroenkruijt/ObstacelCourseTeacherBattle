@@ -976,6 +976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScuffedPlayer2
       objectReference: {fileID: 0}
+    - target: {fileID: 6388579222312990843, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6388579222312990844, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -990,7 +994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6388579222312990844, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6388579222312990844, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1413,7 +1417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204985555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 63.10506, y: -40.214058, z: 0}
+  m_LocalPosition: {x: 63.10506, y: -40.214058, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 450926867}
