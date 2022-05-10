@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts
 {
@@ -18,8 +19,8 @@ namespace Scripts
         int armor = 0;
         [SerializeField]
         int damage = 1;
-        [SerializeField]
-        private GameObject healthbar;
+        //[SerializeField]
+        //private GameObject healthbar;
         [SerializeField]
         private int team;
         [SerializeField]
@@ -29,6 +30,7 @@ namespace Scripts
         PlayerControllerNew controller;
         [SerializeField]
         private int deaths;
+        [SerializeField] private Slider healthBar;
 
         private void Start()
         {
@@ -87,6 +89,7 @@ namespace Scripts
             //{
             //    StartCoroutine(attack());
             //}
+            healthBar.value = health;
 
             if (Input.GetKeyDown(KeyCode.K))
             {
@@ -185,8 +188,8 @@ namespace Scripts
             health -= (3 - armor);
             float healthbarstuff = (0.26f * health);
             Debug.Log(healthbarstuff);
-            healthbar.transform.localScale = new Vector3(healthbarstuff, 0.1f, 1);
-            healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
+            //healthbar.transform.localScale = new Vector3(healthbarstuff, 0.1f, 1);
+            //healthbar.transform.position += new Vector3(-0.5f*healthbarstuff, 0, 0);
         }
 
         public void HealthBuff()

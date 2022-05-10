@@ -23,6 +23,8 @@ namespace Scripts
         [SerializeField]
         private int[] correctNotes;
         private int hitNotes;
+        [SerializeField]
+        managerofgame gameManagerScript;
         private void Start()
         {
             for (int i = 0; i < 12; i++)
@@ -41,11 +43,9 @@ namespace Scripts
                 target.secondKey = divideNotes[i + 4];
                 target.thirdKey = divideNotes[i + 8];
             }
-
-            for (int i = 0; i < correctNotes.Length; i++)
-            {
-                correctNotes[i] = Random.Range(1, 12);               
-            }
+            GameObject gameManager = GameObject.Find("managerofgame");
+            gameManagerScript = gameManager.GetComponent<managerofgame>();
+            
         }
         void Update()
         {
@@ -71,7 +71,12 @@ namespace Scripts
                 connected.SendMessage("Open");
                 Debug.Log("pling plong");
             }
-            
+            correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;
+            correctNotes[2] = (int)gameManagerScript.minutes+1;
+            correctNotes[1] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
+
+
+
                 //if (playedNotes.Count == 3 && playedNotes[0] == correctNotes[0] && playedNotes[1] == correctNotes[1] && playedNotes[2] == correctNotes[2])
                 //{
                 //    connected.SendMessage("Open");

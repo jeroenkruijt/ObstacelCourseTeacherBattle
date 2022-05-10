@@ -31,6 +31,7 @@ namespace Scripts
     private bool checkFailed;
     [SerializeField]
     private GameObject connectedDoor;
+    public float minutes;
     //[SerializeField]
     //private GameObject newPlayer;
         void Update()
@@ -129,7 +130,7 @@ namespace Scripts
         //    timeToDisplay = 0;
         //}
 
-        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timerText.text = string.Format("{0:0}:{1:00}", minutes, seconds);
