@@ -103,12 +103,12 @@ TextureImporter:
       name: RAttack PC-Sheetsprite_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 48
+        width: 22
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,12 +124,12 @@ TextureImporter:
       name: RAttack PC-Sheetsprite_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 26
         y: 0
-        width: 48
+        width: 30
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -145,12 +145,12 @@ TextureImporter:
       name: RAttack PC-Sheetsprite_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 58
         y: 0
-        width: 48
+        width: 45
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
