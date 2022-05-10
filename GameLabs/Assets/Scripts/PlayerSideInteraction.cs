@@ -34,7 +34,8 @@ namespace Scripts
 
         private void Start()
         {
-             controller = gameObject.GetComponent<PlayerControllerNew>();
+            FindObjectOfType<AudioManager>().Play("PianoC");
+            controller = gameObject.GetComponent<PlayerControllerNew>();
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -104,6 +105,7 @@ namespace Scripts
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyOne");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
