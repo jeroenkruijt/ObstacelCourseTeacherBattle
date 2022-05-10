@@ -155,6 +155,11 @@ namespace Scripts
             transform.position = new Vector3(0, 0, -1);
 
             target.walkSpeed = 4f;
+            StartCoroutine(respawnAnimation());
+        }
+
+        private IEnumerator respawnAnimation()
+        {
             yield return new WaitForSeconds(1);
             Respawn = false;
         }
