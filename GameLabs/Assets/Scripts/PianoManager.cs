@@ -74,6 +74,10 @@ namespace Scripts
             correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;
             correctNotes[2] = (int)gameManagerScript.minutes+1;
             correctNotes[1] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
+            if (correctNotes[1] > 12)
+            {
+                correctNotes[1] = correctNotes[9];
+            }
 
 
 
