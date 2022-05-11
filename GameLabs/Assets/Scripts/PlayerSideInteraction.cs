@@ -112,12 +112,14 @@ namespace Scripts
                 }
                 else if (Input.GetKeyDown(KeyCode.T))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyTwo");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.Y))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyThree");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
