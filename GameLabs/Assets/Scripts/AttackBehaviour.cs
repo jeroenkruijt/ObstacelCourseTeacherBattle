@@ -14,7 +14,7 @@ public class AttackBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("Attacking", false);
-        animator.GetComponent<AnimationPlayer>().Attacking = false;
+        animator.GetComponent<Scripts.AnimationPlayer>().Attacking = false;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

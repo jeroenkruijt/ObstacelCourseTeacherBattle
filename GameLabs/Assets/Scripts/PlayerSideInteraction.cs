@@ -30,11 +30,14 @@ namespace Scripts
         PlayerControllerNew controller;
         [SerializeField]
         private int deaths;
+        public bool died = false;
+        public bool Respawn = false;
         [SerializeField] private Slider healthBar;
 
         private void Start()
         {
-             controller = gameObject.GetComponent<PlayerControllerNew>();
+            FindObjectOfType<AudioManager>().Play("PianoC");
+            controller = gameObject.GetComponent<PlayerControllerNew>();
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -105,18 +108,21 @@ namespace Scripts
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyOne");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.T))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyTwo");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.Y))
                 {
+                    FindObjectOfType<AudioManager>().Play("PianoC");
                     inRange.SendMessage("KeyThree");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
@@ -137,6 +143,7 @@ namespace Scripts
 
         private IEnumerator die()
         {
+            died = true;
             health = 5;
             gameObject.GetComponent<PlayerControllerNew>().enabled = false;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
@@ -149,10 +156,19 @@ namespace Scripts
             yield return new WaitForSeconds(deaths * 5);
             gameObject.GetComponent<PlayerControllerNew>().enabled = true;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = true;
-
+            Respawn = true;
+            died = false;
+            
             transform.position = new Vector3(0, 0, -1);
 
             target.walkSpeed = 4f;
+            StartCoroutine(respawnAnimation());
+        }
+
+        private IEnumerator respawnAnimation()
+        {
+            yield return new WaitForSeconds(1);
+            Respawn = false;
         }
 
         public IEnumerator attack()

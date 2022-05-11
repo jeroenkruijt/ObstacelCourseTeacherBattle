@@ -108,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
+        width: 24
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -127,9 +127,9 @@ TextureImporter:
       name: PC down walk-Sheet_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 24
         y: 0
-        width: 48
+        width: 24
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -148,9 +148,9 @@ TextureImporter:
       name: PC down walk-Sheet_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 0
-        width: 48
+        width: 24
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -169,9 +169,9 @@ TextureImporter:
       name: PC down walk-Sheet_3
       rect:
         serializedVersion: 2
-        x: 144
+        x: 72
         y: 0
-        width: 48
+        width: 24
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
