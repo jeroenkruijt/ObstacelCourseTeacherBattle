@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System;
 
-//namespace Scripts
-//{
     public class AudioManager : MonoBehaviour
     {
         public Clips[] sounds;
@@ -25,15 +23,4 @@ using System;
         Clips s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
     }
-
-    //private void OnEnable()
-    //{
-    //    Checkpoint.didTheThing += Play;
-    //}
-
-    //private void OnDisable()
-    //{
-    //    Checkpoint.didTheThing -= Play;
-    //}
 }
-//}
