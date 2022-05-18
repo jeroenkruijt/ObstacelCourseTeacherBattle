@@ -76,7 +76,7 @@ namespace Scripts
             correctNotes[1] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
             if (correctNotes[1] > 12)
             {
-                correctNotes[1] = correctNotes[9];
+                correctNotes[1] = divideNotes[9];
             }
 
 

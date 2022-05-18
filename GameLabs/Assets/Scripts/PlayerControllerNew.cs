@@ -9,11 +9,12 @@ namespace Scripts
     public class PlayerControllerNew : MonoBehaviour
     {
         CharacterController Controller;
-        Vector2 walkInput;
+        public Vector2 walkInput;
         Rigidbody2D rb;
         public float walkSpeed = 4f;
         PlayerSideInteraction interactionScript;
         public float direction = 0;
+        [SerializeField] AnimationPlayer animator;
         private void Start()
         {
             rb = gameObject.GetComponent<Rigidbody2D>();
@@ -26,12 +27,13 @@ namespace Scripts
             if (walkInput.x == 1) direction = 0;                                   
             else if (walkInput.x == -1) direction = 1;
             else if (walkInput.y == 1) direction = 2;
-            else if (walkInput.x == -1) direction = 3;
+            else if (walkInput.y == -1) direction = 3;
         }
 
         public void onInteract(InputAction.CallbackContext context)
         {
             interactionScript.inRange.SendMessage("DoInteraction");
+            animator.SendMessage("InteractAnimation");
         }
 
         public void onAttack(InputAction.CallbackContext context)
