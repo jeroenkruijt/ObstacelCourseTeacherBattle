@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Scripts
 {
@@ -10,17 +11,20 @@ namespace Scripts
         private GameObject[] players;
         [SerializeField]
         private Sprite[] models;
+        [SerializeField]
+        private int newest;
+        [SerializeField]
+        private Slider[] healtbars;
         void joinPlayer()
         {
-            ScuffedPlayerController target = players[players.Length-1].GetComponent<ScuffedPlayerController>();
-            target.inputNumber = players.Length-1;
-            SpriteRenderer thingy = players[players.Length - 1].GetComponent<SpriteRenderer>();
-            thingy.sprite = models[players.Length - 2];
-        }
-
-        private void Update()
-        {
             players = GameObject.FindGameObjectsWithTag("Player");
+            newest = players.Length - 1;
+            Debug.Log(newest);
+            PlayerSideInteraction PSI = players[newest].GetComponent<PlayerSideInteraction>();
+            PSI.playerID = newest;
+            //SpriteRenderer SR = players[newest].GetComponent<SpriteRenderer>();
+            //SR.sprite = models[newest];
+            PSI.healthBar = healtbars[newest];
         }
     }
 }
