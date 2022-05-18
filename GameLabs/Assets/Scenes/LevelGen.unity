@@ -585,6 +585,84 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5.0161247}
   m_EdgeRadius: 0
+--- !u!1 &409266430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6331394312482962867, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+  m_PrefabInstance: {fileID: 833225416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &409266431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409266430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b353133c012354d82fcb2d9a024c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Piano7
+    clip: {fileID: 8300000, guid: 102f73cef6de19044bbb269bfe62cf0f, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano8
+    clip: {fileID: 8300000, guid: 2289116d1af4f524e89d1d35eabedb0e, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano9
+    clip: {fileID: 8300000, guid: bf3ad87b3015f5046a3992d942473c94, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano10
+    clip: {fileID: 8300000, guid: 46ad1222681fd16478774f5f8ec78ac7, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano11
+    clip: {fileID: 8300000, guid: 137dad38fe99aee498790dc6e03441c3, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano12
+    clip: {fileID: 8300000, guid: dffd765d455386c4c859faa0cdd8996d, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano13
+    clip: {fileID: 8300000, guid: f21e2afbcdb03f04ab9f0be3bb6531e7, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano14
+    clip: {fileID: 8300000, guid: 05bbfccf2f56a3a41ac48070dd4311bd, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano15
+    clip: {fileID: 8300000, guid: 3420423b9bf1eca408c6c130e1bcccf8, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano16
+    clip: {fileID: 8300000, guid: c31cd0a926db81f4b87aaa9d4218b027, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano17
+    clip: {fileID: 8300000, guid: eeb905690aec9c3408c2086fa8f82b9c, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano18
+    clip: {fileID: 8300000, guid: fce9c65557c82434a842bdc53b828472, type: 3}
+    volume: 0.5
+    pitch: 0
+    source: {fileID: 0}
 --- !u!4 &409266439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7764737953909293148, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
