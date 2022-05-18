@@ -40,6 +40,8 @@ namespace Scripts
         {
             FindObjectOfType<AudioManager>().Play("PianoC");
             controller = gameObject.GetComponent<PlayerControllerNew>();
+            GameObject target = GameObject.Find("playermanager");
+            PM = target.GetComponent<playerManager>();
             PM.SendMessage("joinPlayer");
         }
 
