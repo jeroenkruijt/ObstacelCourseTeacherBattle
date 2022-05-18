@@ -18,6 +18,7 @@ namespace Scripts
         [SerializeField]
         GameObject[] notesDisplay;
         SpriteRenderer visibility;
+        [SerializeField] private GameObject soundmans;
         //[SerializeField]
         //SpriteRenderer borderOne;
         //[SerializeField]

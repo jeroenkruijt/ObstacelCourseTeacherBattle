@@ -36,7 +36,7 @@ namespace Scripts
 
         private void Start()
         {
-            FindObjectOfType<AudioManager>().Play("Piano12");
+            //FindObjectOfType<AudioManager>().Play("Piano12");
             controller = gameObject.GetComponent<PlayerControllerNew>();
         }
 

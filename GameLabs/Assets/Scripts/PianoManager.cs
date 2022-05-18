@@ -25,6 +25,8 @@ namespace Scripts
         private int hitNotes;
         [SerializeField]
         managerofgame gameManagerScript;
+        [SerializeField]
+        private AudioSource[] sounds;
         private void Start()
         {
             for (int i = 0; i < 12; i++)

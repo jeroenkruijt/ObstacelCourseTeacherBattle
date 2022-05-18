@@ -10,6 +10,7 @@ namespace Scripts
         private GameObject[] players;
         [SerializeField]
         private Sprite[] models;
+
         void joinPlayer()
         {
             ScuffedPlayerController target = players[players.Length-1].GetComponent<ScuffedPlayerController>();

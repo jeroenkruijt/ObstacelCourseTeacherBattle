@@ -8178,6 +8178,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436020278}
   m_CullTransparentMesh: 1
+--- !u!1 &1462888176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6388579222312990843, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+  m_PrefabInstance: {fileID: 833225416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1462888177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462888176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b353133c012354d82fcb2d9a024c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Piano7
+    clip: {fileID: 8300000, guid: 102f73cef6de19044bbb269bfe62cf0f, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano8
+    clip: {fileID: 8300000, guid: 2289116d1af4f524e89d1d35eabedb0e, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano9
+    clip: {fileID: 8300000, guid: bf3ad87b3015f5046a3992d942473c94, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano10
+    clip: {fileID: 8300000, guid: 46ad1222681fd16478774f5f8ec78ac7, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano11
+    clip: {fileID: 8300000, guid: 137dad38fe99aee498790dc6e03441c3, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano12
+    clip: {fileID: 8300000, guid: dffd765d455386c4c859faa0cdd8996d, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano13
+    clip: {fileID: 8300000, guid: f21e2afbcdb03f04ab9f0be3bb6531e7, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano14
+    clip: {fileID: 8300000, guid: 05bbfccf2f56a3a41ac48070dd4311bd, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano15
+    clip: {fileID: 8300000, guid: 3420423b9bf1eca408c6c130e1bcccf8, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano16
+    clip: {fileID: 8300000, guid: c31cd0a926db81f4b87aaa9d4218b027, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano17
+    clip: {fileID: 8300000, guid: eeb905690aec9c3408c2086fa8f82b9c, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
+  - name: Piano18
+    clip: {fileID: 8300000, guid: fce9c65557c82434a842bdc53b828472, type: 3}
+    volume: 0
+    pitch: 0
+    source: {fileID: 0}
 --- !u!1 &1555008562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8253,84 +8331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555008562}
   m_CullTransparentMesh: 1
---- !u!1 &1613309183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3404071047499818763, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
-  m_PrefabInstance: {fileID: 833225416}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1613309185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613309183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b353133c012354d82fcb2d9a024c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Piano7
-    clip: {fileID: 8300000, guid: 102f73cef6de19044bbb269bfe62cf0f, type: 3}
-    volume: 0.568
-    pitch: 1.34
-    source: {fileID: 0}
-  - name: Piano8
-    clip: {fileID: 8300000, guid: 2289116d1af4f524e89d1d35eabedb0e, type: 3}
-    volume: 0.504
-    pitch: 1.34
-    source: {fileID: 0}
-  - name: Piano9
-    clip: {fileID: 8300000, guid: bf3ad87b3015f5046a3992d942473c94, type: 3}
-    volume: 0.538
-    pitch: 1.43
-    source: {fileID: 0}
-  - name: Piano10
-    clip: {fileID: 8300000, guid: 46ad1222681fd16478774f5f8ec78ac7, type: 3}
-    volume: 0.545
-    pitch: 1.4
-    source: {fileID: 0}
-  - name: Piano11
-    clip: {fileID: 8300000, guid: 137dad38fe99aee498790dc6e03441c3, type: 3}
-    volume: 0.542
-    pitch: 1.34
-    source: {fileID: 0}
-  - name: Piano12
-    clip: {fileID: 8300000, guid: dffd765d455386c4c859faa0cdd8996d, type: 3}
-    volume: 0.497
-    pitch: 1.44
-    source: {fileID: 0}
-  - name: Piano13
-    clip: {fileID: 8300000, guid: f21e2afbcdb03f04ab9f0be3bb6531e7, type: 3}
-    volume: 0.553
-    pitch: 1.36
-    source: {fileID: 0}
-  - name: Piano14
-    clip: {fileID: 8300000, guid: 05bbfccf2f56a3a41ac48070dd4311bd, type: 3}
-    volume: 0.533
-    pitch: 1.41
-    source: {fileID: 0}
-  - name: Piano15
-    clip: {fileID: 8300000, guid: 3420423b9bf1eca408c6c130e1bcccf8, type: 3}
-    volume: 0.489
-    pitch: 1.52
-    source: {fileID: 0}
-  - name: Piano16
-    clip: {fileID: 8300000, guid: c31cd0a926db81f4b87aaa9d4218b027, type: 3}
-    volume: 0.474
-    pitch: 1.44
-    source: {fileID: 0}
-  - name: Piano17
-    clip: {fileID: 8300000, guid: eeb905690aec9c3408c2086fa8f82b9c, type: 3}
-    volume: 0.534
-    pitch: 1.5
-    source: {fileID: 0}
-  - name: Piano18
-    clip: {fileID: 8300000, guid: fce9c65557c82434a842bdc53b828472, type: 3}
-    volume: 0.515
-    pitch: 1.38
-    source: {fileID: 0}
 --- !u!1 &1620708287
 GameObject:
   m_ObjectHideFlags: 0
