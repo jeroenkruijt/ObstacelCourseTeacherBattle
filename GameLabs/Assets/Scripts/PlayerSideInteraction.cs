@@ -36,7 +36,7 @@ namespace Scripts
 
         private void Start()
         {
-            FindObjectOfType<AudioManager>().Play("PianoC");
+            FindObjectOfType<AudioManager>().Play("Piano12");
             controller = gameObject.GetComponent<PlayerControllerNew>();
         }
 
@@ -108,21 +108,21 @@ namespace Scripts
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    FindObjectOfType<AudioManager>().Play("PianoC");
+                    FindObjectOfType<AudioManager>().Play("Piano7");
                     inRange.SendMessage("KeyOne");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.T))
                 {
-                    FindObjectOfType<AudioManager>().Play("PianoC");
+                    FindObjectOfType<AudioManager>().Play("Piano12");
                     inRange.SendMessage("KeyTwo");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
                 }
                 else if (Input.GetKeyDown(KeyCode.Y))
                 {
-                    FindObjectOfType<AudioManager>().Play("PianoC");
+                    FindObjectOfType<AudioManager>().Play("Piano18");
                     inRange.SendMessage("KeyThree");
                     playingPiano = false;
                     controller.walkSpeed = 4f;
