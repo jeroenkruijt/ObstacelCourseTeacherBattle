@@ -8514,6 +8514,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3985294891398001228}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246676, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8596,6 +8600,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3985294891398001228}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246676, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -8918,6 +8926,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3985294891398001228}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246676, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9100,6 +9112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3985294891398001228}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246676, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9182,6 +9198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3985294891398001228}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246676, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_RootOrder
       value: 4
