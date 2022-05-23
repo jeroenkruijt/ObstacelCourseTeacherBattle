@@ -32,8 +32,8 @@ namespace Scripts
 
         public void onInteract(InputAction.CallbackContext context)
         {
-            interactionScript.inRange.SendMessage("DoInteraction");
             animator.SendMessage("InteractAnimation");
+            if (interactionScript.inRange != null) interactionScript.inRange.SendMessage("DoInteraction");
         }
 
         public void onAttack(InputAction.CallbackContext context)

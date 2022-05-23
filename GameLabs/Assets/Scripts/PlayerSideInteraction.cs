@@ -43,6 +43,7 @@ namespace Scripts
             GameObject target = GameObject.Find("playermanager");
             PM = target.GetComponent<playerManager>();
             PM.SendMessage("joinPlayer");
+            manager = GameObject.FindGameObjectWithTag("manager");
         }
 
         void OnTriggerEnter2D(Collider2D other)
@@ -54,7 +55,7 @@ namespace Scripts
                 inRange = other.gameObject;
             }
 
-            //if the player comes into contact with an enemy, the enemy's deal damage function is called, damageing the player
+            //if the player comes into contact with an enemy, the enemy's deal damage function is called, damaging the player
             if (other.CompareTag("Enemy"))
             {
                 Debug.Log("hahaha");
@@ -156,7 +157,7 @@ namespace Scripts
             controller.walkSpeed = 0;
             deaths++;
             yield return new WaitForSeconds(deaths * 5);
-            transform.position = new Vector3(0, 0, -1);
+            transform.position = new Vector3(0, 5, -1);
             StartCoroutine(respawn());
         }
 
