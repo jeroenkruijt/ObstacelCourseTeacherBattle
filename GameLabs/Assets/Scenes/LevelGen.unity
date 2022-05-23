@@ -1428,6 +1428,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7764737955098610667, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 305b55294dd634b4c830112ecbc0bb41, type: 2}
     - target: {fileID: 8197227407089915999, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: sounds.Array.size
       value: 12
