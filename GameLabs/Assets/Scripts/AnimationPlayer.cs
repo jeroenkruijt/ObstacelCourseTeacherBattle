@@ -98,6 +98,11 @@ namespace Scripts {
         //    }
         }
 
+        void GetHitAnimation()
+        {
+            _anim.SetBool("IsHit", true);
+        }
+
         void AttackAnimation()
         {
             if (Attacking)

@@ -201,6 +201,7 @@ namespace Scripts
         public void goFuckYourself()
         {
             //take 3 damage but reduce it by the player's armor, then update the healthbar
+            animatorScript.SendMessage("GetHitAnimation");
             health -= (3 - armor);
             float healthbarstuff = (0.26f * health);
             Debug.Log(healthbarstuff);
