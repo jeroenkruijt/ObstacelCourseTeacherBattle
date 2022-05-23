@@ -850,6 +850,7 @@ MonoBehaviour:
   - {fileID: 4339488227348154451}
   - {fileID: 1796568950173969513}
   - {fileID: 1576925252344655439}
+  soundmans: {fileID: 0}
 --- !u!61 &6645720554195876730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2673,6 +2674,7 @@ MonoBehaviour:
   - {fileID: 3205351605056655354}
   - {fileID: 2010903499228955796}
   - {fileID: 8928932531399199944}
+  soundmans: {fileID: 0}
 --- !u!61 &7841880321198826155
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3038,6 +3040,7 @@ MonoBehaviour:
   - {fileID: 5112030951036448055}
   - {fileID: 5611433534381314795}
   - {fileID: 111434477372035606}
+  soundmans: {fileID: 0}
 --- !u!61 &3073555886511310926
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3797,6 +3800,7 @@ MonoBehaviour:
   - {fileID: -6374575207140122990, guid: da250620eb4c95c418992bf4ea7fc85b, type: 3}
   correctNotes: 000000000000000000000000
   gameManagerScript: {fileID: 0}
+  sounds: []
 --- !u!1 &5961730839674510994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6772,6 +6776,7 @@ MonoBehaviour:
   - {fileID: 4859132415171381259}
   - {fileID: 1137775288336606345}
   - {fileID: 74419577001546196}
+  soundmans: {fileID: 0}
 --- !u!61 &7878347745206425173
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7762,11 +7767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7111933271412827544, guid: 3bccb42b2ae1f1d42bb931f362b254a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.252
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 7111933271412827544, guid: 3bccb42b2ae1f1d42bb931f362b254a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.501
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7111933271412827544, guid: 3bccb42b2ae1f1d42bb931f362b254a6, type: 3}
       propertyPath: m_LocalPosition.z
