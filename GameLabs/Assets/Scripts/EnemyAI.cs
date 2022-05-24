@@ -15,6 +15,8 @@ namespace Scripts
         [SerializeField] private int slimeHealth = 5;
         [SerializeField] private bool takenDamage;
         [SerializeField] private float attackCooldown = 1;
+        [SerializeField] private bool Iframes = false;
+        [SerializeField] private float distanceMin;
         Vector3 targetPos;
         public Animator _anim;
 
@@ -22,13 +24,14 @@ namespace Scripts
         {
             _anim = GetComponent<Animator>();
         }
-        private void FixedUpdate()
+
+        private void Update()
         {
             //find all of the players and add them to the array
             players = GameObject.FindGameObjectsWithTag("Player");
             //set the closestplayer to a nonexistent one with the highest possible distance
             int closestPlayerIndex = -1;
-            float distanceMin = float.MaxValue;
+            distanceMin = float.MaxValue;
             for (int i = 0; i < players.Length; i++)
             {
                 //check if the player is alive, if so get the distance to it
@@ -44,9 +47,14 @@ namespace Scripts
                     }
                 }
             }
-
             closestPlayer = players[closestPlayerIndex];
-            targetPos = new Vector3(closestPlayer.transform.position.x, (closestPlayer.transform.position.y-0.9f), transform.position.z);
+        }
+        private void FixedUpdate()
+        {
+            if (closestPlayer != null)
+            {
+                targetPos = new Vector3(closestPlayer.transform.position.x - 0.5f, (closestPlayer.transform.position.y - 1.4f), transform.position.z);
+            }
             //if the distance is less that the detection range move towards them
             if (distanceMin <= detectionRange)
             {
@@ -88,18 +96,14 @@ namespace Scripts
 
         private IEnumerator dealDamage()
         {
-            //this function is called in PlayerSideInteraction. the player's gofuckyourself function is called, then the slime waits for its attack cooldown
-            bool Iframes = false;
-            while (Vector3.Distance(closestPlayer.transform.position, this.transform.position) <= 1)
-            {
+            //this function is called in PlayerSideInteraction. the player's gofuckyourself function is called, then the slime waits for its attack cooldown          
                 if (!Iframes)
                 {
                     closestPlayer.SendMessage("goFuckYourself");
                     Iframes = true;
                 }
                 yield return new WaitForSeconds(attackCooldown);
-                Iframes = false;
-            }
+                Iframes = false;            
         }
         private IEnumerator almostDead()
         {

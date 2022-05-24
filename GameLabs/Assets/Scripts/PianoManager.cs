@@ -53,26 +53,38 @@ namespace Scripts
         {
             //get the door script and tell it to open or close
             door connected = connectedDoor.GetComponent<door>();
-            if (playedNotes.Count == correctNotes.Length)
+            
+            if (playedNotes.Count > 0 && playedNotes[playedNotes.Count-1] != correctNotes[playedNotes.Count-1])
             {
-                for (int i = 0; i < correctNotes.Length; i++)
-                {
-                    if (playedNotes[i] == correctNotes[i])
-                    {
-                        hitNotes++;
-                    }
-                    else
-                    {                     
-                        playedNotes.Clear();
-                        hitNotes = 0;
-                    }
-                }
+                Debug.Log(playedNotes[playedNotes.Count - 1]);
+                playedNotes.Clear();
             }
-            if (hitNotes == correctNotes.Length)
+            else if (playedNotes.Count == correctNotes.Length)
             {
                 connected.SendMessage("Open");
                 Debug.Log("pling plong");
             }
+
+            //if (playedNotes.Count == correctNotes.Length)
+            //{
+            //    for (int i = 0; i < correctNotes.Length; i++)
+            //    {
+            //        if (playedNotes[i] == correctNotes[i])
+            //        {
+            //            hitNotes++;
+            //        }
+            //        else
+            //        {                     
+            //            playedNotes.Clear();
+            //            hitNotes = 0;
+            //        }
+            //    }
+            //}
+            //if (hitNotes == correctNotes.Length)
+            //{
+            //    connected.SendMessage("Open");
+            //    Debug.Log("pling plong");
+            //}
             correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;
             correctNotes[2] = (int)gameManagerScript.minutes+1;
             correctNotes[1] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
