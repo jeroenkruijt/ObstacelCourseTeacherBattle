@@ -1432,6 +1432,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 7764737955098610667, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d34d5b104a0800144b3b8cd5822c34dd, type: 2}
     - target: {fileID: 8197227407089915999, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: sounds.Array.size
       value: 12
@@ -8044,7 +8048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1162343198
 Animator:
   serializedVersion: 3
@@ -9256,11 +9260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 886634011082628104, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1055946
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 886634011082628104, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44480526
+      value: -7.7
       objectReference: {fileID: 0}
     - target: {fileID: 886634011082628104, guid: d1c7ee550674ff045ba4c44d63798339, type: 3}
       propertyPath: m_LocalPosition.z
