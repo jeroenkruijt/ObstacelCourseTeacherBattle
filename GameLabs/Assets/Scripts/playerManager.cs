@@ -10,7 +10,7 @@ namespace Scripts
         [SerializeField]
         private GameObject[] players;
         [SerializeField]
-        private Sprite[] models;
+        private RuntimeAnimatorController[] models;
         [SerializeField]
         private int newest;
         [SerializeField]
@@ -22,8 +22,8 @@ namespace Scripts
             Debug.Log(newest);
             PlayerSideInteraction PSI = players[newest].GetComponent<PlayerSideInteraction>();
             PSI.playerID = newest;
-            //SpriteRenderer SR = players[newest].GetComponent<SpriteRenderer>();
-            //SR.sprite = models[newest];
+            Animator anim = players[newest].GetComponent<Animator>();
+            anim.runtimeAnimatorController = models[newest];
             PSI.healthBar = healtbars[newest];
         }
     }

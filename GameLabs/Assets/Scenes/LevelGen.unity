@@ -9627,7 +9627,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  models: []
+  models:
+  - {fileID: 9100000, guid: d34d5b104a0800144b3b8cd5822c34dd, type: 2}
+  - {fileID: 9100000, guid: 6453ef63c7ae9ed41aff540baa95c11a, type: 2}
+  - {fileID: 9100000, guid: bdd9a100fa8b89046b4b779d036542e6, type: 2}
   newest: 0
   healtbars:
   - {fileID: 1888874400}
