@@ -14,7 +14,7 @@ namespace Scripts
         public GameObject attackHitbox;
         [Header("Stats:")]
         [SerializeField]
-        public int health = 5;
+        public int health = 15;
         [SerializeField]
         int armor = 0;
         [SerializeField]
@@ -150,7 +150,7 @@ namespace Scripts
         private IEnumerator die()
         {
             animatorScript.SendMessage("DeathAnimation");
-            health = 5;
+            health = 15;
             gameObject.GetComponent<PlayerControllerNew>().enabled = false;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
             transform.position = new Vector3(99, 99, 99);
