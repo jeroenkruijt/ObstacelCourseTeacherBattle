@@ -87,6 +87,7 @@ namespace Scripts
             //if the slime hasnt taken damage within the last second, its health decreases by one
             if (!takenDamage)
             {
+                _anim.SetBool("IsHit", true);
                 slimeHealth--;
                 takenDamage = true;
             }

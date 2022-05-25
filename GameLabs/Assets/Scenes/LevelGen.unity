@@ -8439,6 +8439,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1204985556}
     m_Modifications:
+    - target: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4d24d38945ed17243acbdfb1ba6c2671, type: 2}
     - target: {fileID: 3370459488820246675, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
       propertyPath: m_Size.x
       value: 2
@@ -8595,6 +8599,8 @@ MonoBehaviour:
   - {fileID: 6943634760587664128, guid: 12a9c35572b89d342b85b938a0123e39, type: 3}
   - {fileID: 1443991011927575040, guid: 43c3531a65fffb14f9f861680cc5d203, type: 3}
   - {fileID: 6119184196037934063, guid: 516dce09995cae94abdca9f549bfe54d, type: 3}
+  - {fileID: 1264106498069728734, guid: 7b2cb6ae89218fc4189f47c9bfb242d6, type: 3}
+  - {fileID: 5662510161513240241, guid: a4e50f2113de39142836c869e158305b, type: 3}
   - {fileID: 2344474815304060205, guid: 0c99429b88c2af147af2e891ae0b59b3, type: 3}
   progressbars:
   - {fileID: 701840483}
