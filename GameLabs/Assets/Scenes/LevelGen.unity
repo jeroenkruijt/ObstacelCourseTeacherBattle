@@ -1004,7 +1004,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggered: 0
-  _anim: {fileID: 0}
+  _anim: {fileID: 505166789}
+--- !u!95 &505166789 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2382304596672848674, guid: 17d3dbd176577dc46915967ef148c7df, type: 3}
+  m_PrefabInstance: {fileID: 1301811183}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8048,7 +8053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1162343198
 Animator:
   serializedVersion: 3
@@ -9179,6 +9184,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673791160479098973, guid: 6ad76c0b68deb7147b99d716dd75bd6f, type: 3}
+      propertyPath: dragmanagerhere
+      value: 
+      objectReference: {fileID: 1374274088}
+    - target: {fileID: 2673791160479098973, guid: 6ad76c0b68deb7147b99d716dd75bd6f, type: 3}
       propertyPath: Rooms.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -9690,7 +9699,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  models: []
+  models:
+  - {fileID: 9100000, guid: d34d5b104a0800144b3b8cd5822c34dd, type: 2}
+  - {fileID: 9100000, guid: 6453ef63c7ae9ed41aff540baa95c11a, type: 2}
+  - {fileID: 9100000, guid: bdd9a100fa8b89046b4b779d036542e6, type: 2}
+  - {fileID: 9100000, guid: 8a2286c8bced59640812531daaf04094, type: 2}
   newest: 0
   healtbars:
   - {fileID: 1888874400}
