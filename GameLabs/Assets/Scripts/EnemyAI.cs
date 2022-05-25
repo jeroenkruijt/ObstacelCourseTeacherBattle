@@ -45,9 +45,9 @@ namespace Scripts
                         distanceMin = distCheck;
                         closestPlayerIndex = i;
                     }
+                    closestPlayer = players[closestPlayerIndex];
                 }
             }
-            closestPlayer = players[closestPlayerIndex];
         }
         private void FixedUpdate()
         {
