@@ -11,17 +11,18 @@ public class RespawnBehaviour : StateMachineBehaviour
     //}
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-
-    //}
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("AliveAgain", false);
         animator.GetComponent<Scripts.AnimationPlayer>().respawn = false;
     }
+
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    animator.SetBool("AliveAgain", false);
+    //    animator.GetComponent<Scripts.AnimationPlayer>().respawn = false;
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -163,11 +163,12 @@ namespace Scripts
 
         private IEnumerator respawn()
         {
+            animatorScript.SendMessage("hugeRez");
             yield return new WaitForSeconds(1);
             gameObject.GetComponent<PlayerControllerNew>().enabled = true;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = true;
             controller.walkSpeed = 4f;
-            animatorScript.SendMessage("hugeRez");
+            
         }
 
         public IEnumerator attack()
