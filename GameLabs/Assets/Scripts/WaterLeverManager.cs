@@ -7,11 +7,6 @@ namespace Scripts
     public class WaterLeverManager : MonoBehaviour
     {
         [SerializeField] private GameObject[] levers;
-        // Start is called before the first frame update
-        void Start()
-        {
-            //levers = GameObject.FindGameObjectsWithTag("lever");
-        }
 
         void flip()
         {
