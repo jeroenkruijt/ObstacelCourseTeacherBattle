@@ -27,11 +27,14 @@ namespace Scripts
         //SpriteRenderer borderThree;   
 
         void Start()
-        {
-            players = GameObject.FindGameObjectsWithTag("Player");
+        {           
             manager = GameObject.FindGameObjectWithTag("PianoManager");
             managerScript = manager.GetComponent<PianoManager>();
             noSprites();
+        }
+        private void Update()
+        {
+            players = GameObject.FindGameObjectsWithTag("Player");
         }
 
         void setSprites()
