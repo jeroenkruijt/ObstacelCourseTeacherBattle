@@ -33,8 +33,12 @@ namespace Scripts
     private GameObject connectedDoor;
     public float minutes;
     public GameObject[] leverroomvariants;
-        //[SerializeField]
-        //private GameObject newPlayer;
+    [SerializeField]
+    private GameObject Cam;
+    [SerializeField]
+    private GameObject[] progressTrackers;
+    [SerializeField]
+    private GameObject[] players;
         void Update()
     {
         //count down the timer and generate seeds;
@@ -43,14 +47,15 @@ namespace Scripts
             timer();
             door connected = connectedDoor.GetComponent<door>();
             connected.SendMessage("Open");
-
-        }
+            progressTrackers = GameObject.FindGameObjectsWithTag("ProgressTracker");
+            }
         generateSeed();
 
             //if (Input.GetKeyDown("j"))
             //{
             //    Instantiate (newPlayer);
             //}
+            players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     public void generateSeed()
@@ -150,6 +155,17 @@ namespace Scripts
         {
             readyTeams = 0;
         }
+        progress Pscript = progressTrackers[progressScore1 - 1].GetComponent<progress>();
+        Camera camponent = Cam.GetComponent<Camera>();
+        Cam.transform.position = Pscript.camLocation;
+        camponent.orthographicSize = Pscript.camSize;
+            for (int i = 0; i < players.Length; i++)
+            {
+                PlayerSideInteraction target = players[i].GetComponent<PlayerSideInteraction>();
+                target.respawnlocation = progressTrackers[progressScore1-1].transform.position;
+                target.respawnlocation.z = -1;
+                players[i].transform.position = target.respawnlocation;
+            }
     }
     void progress2()
     {

@@ -35,6 +35,7 @@ namespace Scripts
         public Slider healthBar;
         [SerializeField] AnimationPlayer animatorScript;
         [SerializeField] playerManager PM;
+        public Vector3 respawnlocation;
 
         private void Start()
         {
@@ -157,7 +158,7 @@ namespace Scripts
             controller.walkSpeed = 0;
             deaths++;
             yield return new WaitForSeconds(deaths * 5);
-            transform.position = new Vector3(0, 5, -1);
+            transform.position = respawnlocation;
             StartCoroutine(respawn());
         }
 

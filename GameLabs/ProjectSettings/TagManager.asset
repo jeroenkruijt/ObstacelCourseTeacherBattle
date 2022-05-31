@@ -13,6 +13,7 @@ TagManager:
   - Team1Player
   - Team2Player
   - PianoManager
+  - ProgressTracker
   layers:
   - Default
   - TransparentFX
