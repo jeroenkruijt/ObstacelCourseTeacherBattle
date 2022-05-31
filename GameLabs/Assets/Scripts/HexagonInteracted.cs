@@ -25,7 +25,7 @@ namespace Scripts
                 //if (checker != null)
                 {
                     GameObject checker = target.inRange;
-                    if (checker = gameObject)
+                    if (checker == gameObject)
                     {
                         culprit = players[i];
                     }
