@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: e6da186577612f24c9bbda69f3883be6
+guid: c74c5d8e800a62648a4dadcc835bcded
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -1501910772096988896
-    second: LAttack PC4 -sprite-Sheet_0
-  - first:
-      213: -8189466398448708573
-    second: LAttack PC4 -sprite-Sheet_1
-  - first:
-      213: 5503326972298176321
-    second: LAttack PC4 -sprite-Sheet_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,72 +87,21 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: LAttack PC4 -sprite-Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 22
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02983d83c14282be0800000000000000
-      internalID: -1501910772096988896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LAttack PC4 -sprite-Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 26
-        y: 0
-        width: 30
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 324977443bb295e80800000000000000
-      internalID: -8189466398448708573
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LAttack PC4 -sprite-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 0
-        width: 56
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 147a8a239bebf5c40800000000000000
-      internalID: 5503326972298176321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

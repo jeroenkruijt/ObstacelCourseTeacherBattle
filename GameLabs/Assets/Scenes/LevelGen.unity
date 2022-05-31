@@ -1435,7 +1435,7 @@ PrefabInstance:
     - target: {fileID: 7764737955098610667, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d34d5b104a0800144b3b8cd5822c34dd, type: 2}
+      objectReference: {fileID: 9100000, guid: 6453ef63c7ae9ed41aff540baa95c11a, type: 2}
     - target: {fileID: 8197227407089915999, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: sounds.Array.size
       value: 12

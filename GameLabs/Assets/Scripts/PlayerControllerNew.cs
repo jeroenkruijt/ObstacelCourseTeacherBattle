@@ -41,6 +41,26 @@ namespace Scripts
             interactionScript.SendMessage("attack");
         }
 
+        public void OnEscape(InputAction.CallbackContext context)
+        {
+            interactionScript.SendMessage("Escaping");
+        }
+
+        public void OnPianoPlayR(InputAction.CallbackContext context)
+        {
+            interactionScript.SendMessage("RPress");
+        }
+
+        public void OnPianoPlayT(InputAction.CallbackContext context)
+        {
+            interactionScript.SendMessage("TPress");
+        }
+
+        public void OnPianoPlayY(InputAction.CallbackContext context)
+        {
+            interactionScript.SendMessage("YPress");
+        }
+
 
         private void FixedUpdate()
         {
