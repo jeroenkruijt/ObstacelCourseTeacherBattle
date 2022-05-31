@@ -83,7 +83,7 @@ namespace Scripts
         private void playPiano()
         {
             playingPiano = true;
-            
+
             controller.walkSpeed = 0f;
         }
         void Update()
@@ -114,30 +114,19 @@ namespace Scripts
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    FindObjectOfType<AudioManager>().Play("Piano7");
-                    inRange.SendMessage("KeyOne");
-                    playingPiano = false;
-                    controller.walkSpeed = 4f;
+                    RPress();
                 }
                 else if (Input.GetKeyDown(KeyCode.T))
                 {
-                    FindObjectOfType<AudioManager>().Play("Piano12");
-                    inRange.SendMessage("KeyTwo");
-                    playingPiano = false;
-                    controller.walkSpeed = 4f;
+                    TPress();
                 }
                 else if (Input.GetKeyDown(KeyCode.Y))
                 {
-                    FindObjectOfType<AudioManager>().Play("Piano18");
-                    inRange.SendMessage("KeyThree");
-                    playingPiano = false;
-                    controller.walkSpeed = 4f;
+                    YPress();
                 }
                 else if (Input.GetKeyDown(KeyCode.Escape))
                 {
-                    inRange.SendMessage("Exit");
-                    playingPiano = false;
-                    controller.walkSpeed = 4f;
+                    Escaping();
                 }
             }
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
@@ -150,7 +139,7 @@ namespace Scripts
         private IEnumerator die()
         {
             animatorScript.SendMessage("DeathAnimation");
-            health = 15;
+            health = 5;
             gameObject.GetComponent<PlayerControllerNew>().enabled = false;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = false;
             transform.position = new Vector3(99, 99, 99);
@@ -168,7 +157,7 @@ namespace Scripts
             gameObject.GetComponent<PlayerControllerNew>().enabled = true;
             gameObject.GetComponent<PlayerSideInteraction>().enabled = true;
             controller.walkSpeed = 4f;
-            
+
         }
 
         public IEnumerator attack()
@@ -204,7 +193,7 @@ namespace Scripts
         {
             //take 3 damage but reduce it by the player's armor, then update the healthbar
             animatorScript.SendMessage("GetHitAnimation");
-            health -= (3 - armor);
+            health -= (2 - armor);
             float healthbarstuff = (0.26f * health);
             Debug.Log(healthbarstuff);
             //healthbar.transform.localScale = new Vector3(healthbarstuff, 0.1f, 1);
@@ -242,12 +231,43 @@ namespace Scripts
         {
             // same thing as with armor but with damage instead
             int preBuffDamage = damage;
-            damage++; 
+            damage++;
             yield return new WaitForSeconds(5);
             if (damage > preBuffDamage)
             {
                 damage--;
             }
+        }
+
+        public void RPress()
+        {
+            FindObjectOfType<AudioManager>().Play("Piano7");
+            inRange.SendMessage("KeyOne");
+            playingPiano = false;
+            controller.walkSpeed = 4f;
+        }
+
+        public void TPress()
+        {
+            FindObjectOfType<AudioManager>().Play("Piano12");
+            inRange.SendMessage("KeyOne");
+            playingPiano = false;
+            controller.walkSpeed = 4f;
+        }
+
+        public void YPress()
+        {
+            FindObjectOfType<AudioManager>().Play("Piano18");
+            inRange.SendMessage("KeyOne");
+            playingPiano = false;
+            controller.walkSpeed = 4f;
+        }
+
+        public void Escaping()
+        {
+            inRange.SendMessage("Exit");
+            playingPiano = false;
+            controller.walkSpeed = 4f;
         }
 
     }

@@ -275,6 +275,62 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0a49a0b5-defe-4227-9259-b6a4539ff076
     m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7764737955098610664}
+        m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
+        m_MethodName: Escaping
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3bf91786-3fbf-4785-b54b-9fea5cfe49dd
+    m_ActionName: Player/Escape[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7764737955098610664}
+        m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
+        m_MethodName: RPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7764737955098610664}
+        m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
+        m_MethodName: TPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7764737955098610664}
+        m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
+        m_MethodName: YPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 51b09139-601b-4ba4-9c0e-c99c6d81d193
+    m_ActionName: Player/Pianoplay[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
