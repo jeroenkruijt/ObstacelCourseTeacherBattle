@@ -8,6 +8,7 @@ namespace Scripts
     {
         //for an explanation of the functionality, check the RoundedInteracted script
         public GameObject[] players;
+        [SerializeField]
         GameObject culprit;
         GameObject manager;
         public int firstKey;
