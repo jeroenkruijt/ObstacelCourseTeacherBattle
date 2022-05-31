@@ -20,7 +20,12 @@ public class Roomspawner2electricboogaloo : MonoBehaviour
         void Fire()
         {
             //actually generate a room and destroy the room spawnpoint to prevent further rooms from generating here
-            Instantiate(manager.Rooms[manager.seed], transform.position, manager.Rooms[manager.seed].transform.rotation);
+            if (manager.seed == 1)
+            {
+                Instantiate(manager.leverroomvariants[Random.Range(0, 3)], transform.position, Quaternion.identity);
+            }
+            else
+            Instantiate(manager.Rooms[manager.seed], transform.position, Quaternion.identity);
             //add it to the rooms so we can put a cap on them
             manager.currentRooms++;
             Destroy(this.gameObject);

@@ -127,9 +127,11 @@ MonoBehaviour:
   closestPlayer: {fileID: 0}
   slimeSpeed: 0.05
   detectionRange: 5
-  slimeHealth: 5
+  slimeHealth: 3
   takenDamage: 0
   attackCooldown: 3
+  Iframes: 0
+  distanceMin: 0
   _anim: {fileID: 0}
 --- !u!95 &8301864876786740837
 Animator:

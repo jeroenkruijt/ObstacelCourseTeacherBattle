@@ -32,8 +32,9 @@ namespace Scripts
     [SerializeField]
     private GameObject connectedDoor;
     public float minutes;
-    //[SerializeField]
-    //private GameObject newPlayer;
+    public GameObject[] leverroomvariants;
+        //[SerializeField]
+        //private GameObject newPlayer;
         void Update()
     {
         //count down the timer and generate seeds;
