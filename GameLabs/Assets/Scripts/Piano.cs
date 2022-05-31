@@ -83,6 +83,7 @@ namespace Scripts
         {
             //ClearPiano();
             managerScript.playedNotes.Add(firstKey);
+            managerScript.SendMessage("checkcorrectnotes");
             //borderOne.enabled = true;
             visibility = notesDisplay[0].GetComponent<SpriteRenderer>();
             visibility.sprite = managerScript.pianoKeySprites[(firstKey * 2)-2];
@@ -94,6 +95,7 @@ namespace Scripts
         {
             //ClearPiano();
             managerScript.playedNotes.Add(secondKey);
+            managerScript.SendMessage("checkcorrectnotes");
             //borderTwo.enabled = true;
             visibility = notesDisplay[1].GetComponent<SpriteRenderer>();
             visibility.sprite = managerScript.pianoKeySprites[(secondKey * 2) + 22];
@@ -106,6 +108,7 @@ namespace Scripts
         {
             //ClearPiano();
             managerScript.playedNotes.Add(thirdKey);
+            managerScript.SendMessage("checkcorrectnotes");
             //borderThree.enabled = true;
             visibility = notesDisplay[2].GetComponent<SpriteRenderer>();
             visibility.sprite = managerScript.pianoKeySprites[(thirdKey * 2) + 46];

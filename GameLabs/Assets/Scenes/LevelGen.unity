@@ -1429,8 +1429,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7764737953909293148, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764737953909293148, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764737955098610662, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
+      propertyPath: walkSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7764737955098610667, guid: 951f13658dbfeed428ab1129cbf7513e, type: 3}
       propertyPath: m_Controller
@@ -8490,7 +8498,7 @@ MonoBehaviour:
   timeValue: 0
   timerText: {fileID: 1884290354}
   currentRooms: 0
-  seed: 0
+  seed: 2
   readyTeams: 0
   Rooms:
   - {fileID: 8397085394541064441, guid: 02d707d95bb4c5c4c97e2eaa5be4286e, type: 3}

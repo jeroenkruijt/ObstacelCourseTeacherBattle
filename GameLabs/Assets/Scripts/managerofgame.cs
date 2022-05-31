@@ -65,7 +65,7 @@ namespace Scripts
         //if that is also not the case, generate a room based on the seed
         if (currentRooms < 3)
         {
-            seed = Random.Range(0, Rooms.Length - 1);
+            if (seed < 0)  seed = Random.Range(0, Rooms.Length - 1);
             seedChecker();
             pastseeds.Add(seed);
         }

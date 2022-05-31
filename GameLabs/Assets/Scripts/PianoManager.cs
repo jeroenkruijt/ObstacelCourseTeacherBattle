@@ -54,12 +54,13 @@ namespace Scripts
             //get the door script and tell it to open or close
             door connected = connectedDoor.GetComponent<door>();
             
-            if (playedNotes.Count > 0 && playedNotes[playedNotes.Count-1] != correctNotes[playedNotes.Count-1])
-            {
-                Debug.Log(playedNotes[playedNotes.Count - 1]);
-                playedNotes.Clear();
-            }
-            else if (playedNotes.Count == correctNotes.Length)
+            //if (playedNotes.Count > 0 && playedNotes[playedNotes.Count-1] != correctNotes[playedNotes.Count-1])
+            //{
+            //    Debug.Log(playedNotes[playedNotes.Count - 1]);
+            //    Debug.Log(correctNotes[playedNotes.Count - 1]);
+            //    playedNotes.Clear();
+            //}
+            if (playedNotes.Count == correctNotes.Length)
             {
                 connected.SendMessage("Open");
                 Debug.Log("pling plong");
@@ -85,22 +86,41 @@ namespace Scripts
             //    connected.SendMessage("Open");
             //    Debug.Log("pling plong");
             //}
+
+
+
             correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;
-            correctNotes[2] = (int)gameManagerScript.minutes+1;
-            correctNotes[1] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
-            if (correctNotes[1] > 12)
-            {
-                correctNotes[1] = divideNotes[9];
-            }
+            correctNotes[1] = correctNotes[0];
+            correctNotes[2] = correctNotes[0];
+            correctNotes[3] = (int)gameManagerScript.minutes+1;
+            correctNotes[4] = correctNotes[3];
+            correctNotes[5] = correctNotes[4];
+            correctNotes[6] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
+            if (correctNotes[6] > 12) correctNotes[6] = divideNotes[9];
+            correctNotes[7] = correctNotes[6];
+            correctNotes[8] = correctNotes[6];
+
+            
 
 
 
-                //if (playedNotes.Count == 3 && playedNotes[0] == correctNotes[0] && playedNotes[1] == correctNotes[1] && playedNotes[2] == correctNotes[2])
-                //{
-                //    connected.SendMessage("Open");
-                //    Debug.Log("pling plong");
-                //} 
+            //if (playedNotes.Count == 3 && playedNotes[0] == correctNotes[0] && playedNotes[1] == correctNotes[1] && playedNotes[2] == correctNotes[2])
+            //{
+            //    connected.SendMessage("Open");
+            //    Debug.Log("pling plong");
+            //} 
         }
+
+        void checkcorrectnotes()
+        {
+            Debug.Log(playedNotes[playedNotes.Count - 1]);
+            Debug.Log(correctNotes[playedNotes.Count - 1]);
+            if (playedNotes[playedNotes.Count - 1] != correctNotes[playedNotes.Count - 1])
+            {
+                playedNotes.Clear();
+            }
+        }
+
         void noteChecker()
         {
             if (pastNotes.Count > 0)
