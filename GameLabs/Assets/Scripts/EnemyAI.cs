@@ -75,11 +75,15 @@ namespace Scripts
             {
                 Debug.Log("bruh");
                 StartCoroutine(takeDamage());
-                if (slimeHealth <= 0)
-                {
-                    StartCoroutine(almostDead());
-                }
+                if (slimeHealth <= 0) StartCoroutine(almostDead());
+                StartCoroutine(knockback());
             }
+        }
+        private IEnumerator knockback()
+        {
+            slimeSpeed = -0.1f;
+            yield return new WaitForSeconds(0.5f);
+            slimeSpeed = 0.05f;
         }
 
         private IEnumerator takeDamage()
