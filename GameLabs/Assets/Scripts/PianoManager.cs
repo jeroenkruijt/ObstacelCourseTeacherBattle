@@ -63,7 +63,7 @@ namespace Scripts
             if (playedNotes.Count == correctNotes.Length)
             {
                 connected.SendMessage("Open");
-                Debug.Log("pling plong");
+                //Debug.Log("pling plong");
             }
 
             //if (playedNotes.Count == correctNotes.Length)
