@@ -110,25 +110,25 @@ namespace Scripts
                 }
             }
 
-            if (playingPiano)
-            {
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    RPress();
-                }
-                else if (Input.GetKeyDown(KeyCode.T))
-                {
-                    TPress();
-                }
-                else if (Input.GetKeyDown(KeyCode.Y))
-                {
-                    YPress();
-                }
-                else if (Input.GetKeyDown(KeyCode.Escape))
-                {
-                    Escaping();
-                }
-            }
+            //if (playingPiano)
+            //{
+            //    if (Input.GetKeyDown(KeyCode.R))
+            //    {
+            //        RPress();
+            //    }
+            //    else if (Input.GetKeyDown(KeyCode.T))
+            //    {
+            //        TPress();
+            //    }
+            //    else if (Input.GetKeyDown(KeyCode.Y))
+            //    {
+            //        YPress();
+            //    }
+            //    else if (Input.GetKeyDown(KeyCode.Escape))
+            //    {
+            //        Escaping();
+            //    }
+            //}
             //if a player dies, turn off their functionality and teleport them away (dont destroy them because that causes communication issues)
             if (health <= 0)
             {
@@ -250,7 +250,7 @@ namespace Scripts
         public void TPress()
         {
             FindObjectOfType<AudioManager>().Play("Piano12");
-            inRange.SendMessage("KeyOne");
+            inRange.SendMessage("KeyTwo");
             playingPiano = false;
             controller.walkSpeed = 4f;
         }
@@ -258,7 +258,7 @@ namespace Scripts
         public void YPress()
         {
             FindObjectOfType<AudioManager>().Play("Piano18");
-            inRange.SendMessage("KeyOne");
+            inRange.SendMessage("KeyThree");
             playingPiano = false;
             controller.walkSpeed = 4f;
         }

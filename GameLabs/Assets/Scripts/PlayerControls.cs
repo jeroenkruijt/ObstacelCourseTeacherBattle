@@ -64,13 +64,31 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Pianoplay"",
-                    ""type"": ""Value"",
+                    ""name"": ""PianoplayLeft"",
+                    ""type"": ""Button"",
                     ""id"": ""51b09139-601b-4ba4-9c0e-c99c6d81d193"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PianoplayMiddle"",
+                    ""type"": ""Button"",
+                    ""id"": ""9bc6f9c1-da6d-4393-9bed-46d5e1da13c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PianoplayRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""9898cea5-bca8-4bee-8aac-4d21d6c5c734"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -257,7 +275,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayLeft"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -268,7 +286,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -279,73 +297,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""MiddleChoice"",
-                    ""id"": ""dea297c3-09ca-4f70-bd62-fbd1e9d12837"",
-                    ""path"": ""OneModifier"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""33cd598a-be89-4b9d-983a-312d7949adc2"",
-                    ""path"": ""<XInputController>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""7c840858-6ac4-43f8-8a56-ac0c49c5a47c"",
-                    ""path"": ""<XInputController>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""RightChoice"",
-                    ""id"": ""f398122d-ea83-47c7-9833-a306f778255f"",
-                    ""path"": ""OneModifier"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""1dccdad9-bff4-4066-a520-4758a6f628fd"",
-                    ""path"": ""<XInputController>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""3ef48e1e-21bd-4e9e-bcda-7f9ead4f4f31"",
-                    ""path"": ""<XInputController>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -356,7 +308,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -367,7 +319,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayMiddle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -378,9 +330,75 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Pianoplay"",
+                    ""action"": ""PianoplayRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""RightChoice"",
+                    ""id"": ""f398122d-ea83-47c7-9833-a306f778255f"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PianoplayRight"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""1dccdad9-bff4-4066-a520-4758a6f628fd"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""PianoplayRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""3ef48e1e-21bd-4e9e-bcda-7f9ead4f4f31"",
+                    ""path"": ""<XInputController>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""PianoplayRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""MiddleChoice"",
+                    ""id"": ""dea297c3-09ca-4f70-bd62-fbd1e9d12837"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PianoplayMiddle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""33cd598a-be89-4b9d-983a-312d7949adc2"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""PianoplayMiddle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""7c840858-6ac4-43f8-8a56-ac0c49c5a47c"",
+                    ""path"": ""<XInputController>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""PianoplayMiddle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -416,7 +434,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Escape = m_Player.FindAction("Escape", throwIfNotFound: true);
-        m_Player_Pianoplay = m_Player.FindAction("Pianoplay", throwIfNotFound: true);
+        m_Player_PianoplayLeft = m_Player.FindAction("PianoplayLeft", throwIfNotFound: true);
+        m_Player_PianoplayMiddle = m_Player.FindAction("PianoplayMiddle", throwIfNotFound: true);
+        m_Player_PianoplayRight = m_Player.FindAction("PianoplayRight", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -480,7 +500,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Escape;
-    private readonly InputAction m_Player_Pianoplay;
+    private readonly InputAction m_Player_PianoplayLeft;
+    private readonly InputAction m_Player_PianoplayMiddle;
+    private readonly InputAction m_Player_PianoplayRight;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -489,7 +511,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Escape => m_Wrapper.m_Player_Escape;
-        public InputAction @Pianoplay => m_Wrapper.m_Player_Pianoplay;
+        public InputAction @PianoplayLeft => m_Wrapper.m_Player_PianoplayLeft;
+        public InputAction @PianoplayMiddle => m_Wrapper.m_Player_PianoplayMiddle;
+        public InputAction @PianoplayRight => m_Wrapper.m_Player_PianoplayRight;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -511,9 +535,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Escape.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
                 @Escape.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
                 @Escape.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnEscape;
-                @Pianoplay.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplay;
-                @Pianoplay.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplay;
-                @Pianoplay.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplay;
+                @PianoplayLeft.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayLeft;
+                @PianoplayLeft.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayLeft;
+                @PianoplayLeft.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayLeft;
+                @PianoplayMiddle.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayMiddle;
+                @PianoplayMiddle.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayMiddle;
+                @PianoplayMiddle.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayMiddle;
+                @PianoplayRight.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayRight;
+                @PianoplayRight.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayRight;
+                @PianoplayRight.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPianoplayRight;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -530,9 +560,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Escape.started += instance.OnEscape;
                 @Escape.performed += instance.OnEscape;
                 @Escape.canceled += instance.OnEscape;
-                @Pianoplay.started += instance.OnPianoplay;
-                @Pianoplay.performed += instance.OnPianoplay;
-                @Pianoplay.canceled += instance.OnPianoplay;
+                @PianoplayLeft.started += instance.OnPianoplayLeft;
+                @PianoplayLeft.performed += instance.OnPianoplayLeft;
+                @PianoplayLeft.canceled += instance.OnPianoplayLeft;
+                @PianoplayMiddle.started += instance.OnPianoplayMiddle;
+                @PianoplayMiddle.performed += instance.OnPianoplayMiddle;
+                @PianoplayMiddle.canceled += instance.OnPianoplayMiddle;
+                @PianoplayRight.started += instance.OnPianoplayRight;
+                @PianoplayRight.performed += instance.OnPianoplayRight;
+                @PianoplayRight.canceled += instance.OnPianoplayRight;
             }
         }
     }
@@ -561,6 +597,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
         void OnEscape(InputAction.CallbackContext context);
-        void OnPianoplay(InputAction.CallbackContext context);
+        void OnPianoplayLeft(InputAction.CallbackContext context);
+        void OnPianoplayMiddle(InputAction.CallbackContext context);
+        void OnPianoplayRight(InputAction.CallbackContext context);
     }
 }

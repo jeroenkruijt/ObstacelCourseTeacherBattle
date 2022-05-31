@@ -305,6 +305,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 51b09139-601b-4ba4-9c0e-c99c6d81d193
+    m_ActionName: Player/Pianoplay[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 7764737955098610664}
         m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
         m_MethodName: TPress
@@ -317,6 +321,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 9bc6f9c1-da6d-4393-9bed-46d5e1da13c7
+    m_ActionName: Player/PianoplayMiddle[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls:
       - m_Target: {fileID: 7764737955098610664}
         m_TargetAssemblyTypeName: Scripts.PlayerSideInteraction, Assembly-CSharp
         m_MethodName: YPress
@@ -329,8 +337,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 51b09139-601b-4ba4-9c0e-c99c6d81d193
-    m_ActionName: Player/Pianoplay[/Keyboard/r]
+    m_ActionId: 9898cea5-bca8-4bee-8aac-4d21d6c5c734
+    m_ActionName: Player/PianoplayRight[/Keyboard/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
