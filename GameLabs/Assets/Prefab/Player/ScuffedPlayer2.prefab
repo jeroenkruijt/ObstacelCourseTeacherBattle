@@ -196,12 +196,14 @@ MonoBehaviour:
   team: 1
   manager: {fileID: 0}
   playingPiano: 0
+  controller: {fileID: 7764737955098610662}
   deaths: 0
   Respawn: 0
   playerID: 0
   healthBar: {fileID: 0}
   animatorScript: {fileID: 7764737954768135596}
   PM: {fileID: 0}
+  respawnlocation: {x: 0, y: 0, z: 0}
 --- !u!114 &2621647604869835833
 MonoBehaviour:
   m_ObjectHideFlags: 0
