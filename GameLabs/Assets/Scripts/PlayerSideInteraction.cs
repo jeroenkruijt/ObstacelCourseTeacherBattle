@@ -27,7 +27,8 @@ namespace Scripts
         private GameObject manager;
         [SerializeField]
         private bool playingPiano = false;
-        PlayerControllerNew controller;
+        [SerializeField]
+        private PlayerControllerNew controller;
         [SerializeField]
         private int deaths;
         public bool Respawn = false;
@@ -40,7 +41,6 @@ namespace Scripts
         private void Start()
         {
             //FindObjectOfType<AudioManager>().Play("Piano12");
-            controller = gameObject.GetComponent<PlayerControllerNew>();
             GameObject target = GameObject.Find("playermanager");
             PM = target.GetComponent<playerManager>();
             PM.SendMessage("joinPlayer");
