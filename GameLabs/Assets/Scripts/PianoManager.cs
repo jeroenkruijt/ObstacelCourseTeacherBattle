@@ -95,7 +95,7 @@ namespace Scripts
             correctNotes[3] = (int)gameManagerScript.minutes+1;
             correctNotes[4] = correctNotes[3];
             correctNotes[5] = correctNotes[4];
-            correctNotes[6] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
+            correctNotes[6] = (correctNotes[0] + correctNotes[3]) / 2 + divideNotes[8];
             if (correctNotes[6] > 12) correctNotes[6] = divideNotes[9];
             correctNotes[7] = correctNotes[6];
             correctNotes[8] = correctNotes[6];
