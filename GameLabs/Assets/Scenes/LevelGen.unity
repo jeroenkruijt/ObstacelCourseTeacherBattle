@@ -8601,6 +8601,7 @@ MonoBehaviour:
   - {fileID: 8397085394541064441, guid: 02d707d95bb4c5c4c97e2eaa5be4286e, type: 3}
   - {fileID: 6943634760587664128, guid: 12a9c35572b89d342b85b938a0123e39, type: 3}
   - {fileID: 1443991011927575040, guid: 43c3531a65fffb14f9f861680cc5d203, type: 3}
+  - {fileID: 6119184196037934063, guid: 516dce09995cae94abdca9f549bfe54d, type: 3}
   - {fileID: 2344474815304060205, guid: 0c99429b88c2af147af2e891ae0b59b3, type: 3}
   progressbars:
   - {fileID: 701840483}
