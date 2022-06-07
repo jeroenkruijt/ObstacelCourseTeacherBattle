@@ -126,8 +126,8 @@ MonoBehaviour:
   players: []
   closestPlayer: {fileID: 0}
   slimeSpeed: 0.05
-  detectionRange: 5
-  slimeHealth: 3
+  detectionRange: 7
+  slimeHealth: 4
   takenDamage: 0
   attackCooldown: 3
   Iframes: 0

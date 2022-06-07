@@ -10,6 +10,10 @@ namespace Scripts
         private int flippedLevers;
         [SerializeField]
         private GameObject connectedDoor;
+        [SerializeField]
+        private GameObject[] CorrectLevers;
+        [SerializeField]
+        private bool countingdown = false;
         public void LeverAdded()
         {
             flippedLevers++;
@@ -18,8 +22,28 @@ namespace Scripts
                 door connected = connectedDoor.GetComponent<door>();
                 connected.SendMessage("Open");
             }
+            if (!countingdown) StartCoroutine("countdown");
         }
 
+        private IEnumerator countdown()
+        {
+            countingdown = true;
+            yield return new WaitForSeconds(3);
+            countingdown = false;
+            unflip();
+        }
+
+        private void unflip()
+        {
+            for (int i = 0; i < CorrectLevers.Length; i++)
+            {
+                managedLever target = CorrectLevers[i].GetComponent<managedLever>();
+                if (target.triggered == true)
+                {
+                    target.SendMessage("DoInteraction");
+                }
+            }
+        }
         public void LeverRemoved()
         {
             flippedLevers--;

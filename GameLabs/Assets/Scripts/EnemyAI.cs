@@ -81,7 +81,7 @@ namespace Scripts
         }
         private IEnumerator knockback()
         {
-            slimeSpeed = -0.1f;
+            slimeSpeed = -0.01f;
             yield return new WaitForSeconds(0.5f);
             slimeSpeed = 0.05f;
         }

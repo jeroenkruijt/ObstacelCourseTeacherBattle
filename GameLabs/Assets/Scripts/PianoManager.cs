@@ -47,7 +47,20 @@ namespace Scripts
             }
             GameObject gameManager = GameObject.Find("managerofgame");
             gameManagerScript = gameManager.GetComponent<managerofgame>();
-            
+
+            correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;           
+            correctNotes[3] = divideNotes[8]+5;
+            if (correctNotes[3] > 12) correctNotes[3] = 3;            
+            correctNotes[6] = correctNotes[0] + correctNotes[6];
+            if (correctNotes[6] > 12) correctNotes[6] = 6;
+
+
+            correctNotes[1] = correctNotes[0];
+            correctNotes[2] = correctNotes[0];
+            correctNotes[4] = correctNotes[3];
+            correctNotes[5] = correctNotes[4];
+            correctNotes[7] = correctNotes[6];
+            correctNotes[8] = correctNotes[6];
         }
         void Update()
         {
@@ -86,24 +99,6 @@ namespace Scripts
             //    connected.SendMessage("Open");
             //    Debug.Log("pling plong");
             //}
-
-
-
-            correctNotes[0] = (divideNotes[6] + divideNotes[3]) / 2;
-            correctNotes[1] = correctNotes[0];
-            correctNotes[2] = correctNotes[0];
-            correctNotes[3] = (int)gameManagerScript.minutes+1;
-            correctNotes[4] = correctNotes[3];
-            correctNotes[5] = correctNotes[4];
-            correctNotes[6] = (correctNotes[0] + correctNotes[2]) / 2 + divideNotes[8];
-            if (correctNotes[6] > 12) correctNotes[6] = divideNotes[9];
-            correctNotes[7] = correctNotes[6];
-            correctNotes[8] = correctNotes[6];
-
-            
-
-
-
             //if (playedNotes.Count == 3 && playedNotes[0] == correctNotes[0] && playedNotes[1] == correctNotes[1] && playedNotes[2] == correctNotes[2])
             //{
             //    connected.SendMessage("Open");
