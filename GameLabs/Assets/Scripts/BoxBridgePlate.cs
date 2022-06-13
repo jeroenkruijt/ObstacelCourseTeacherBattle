@@ -18,20 +18,31 @@ namespace Scripts
         BoxBridges setDirection;
         [SerializeField]
         private GameObject plateManager;
+        [SerializeField]
+        private Animator _anim;
 
 
         private void Start()
         {
             setDirection = BridgeMaker.GetComponent<BoxBridges>();
+            _anim = GetComponent<Animator>();
         }
         public void OnTriggerEnter2D(Collider2D other)
         {
             //if a player steps on this call the attached box' move function
             if (other.CompareTag("Player"))
             {
+                _anim.SetBool("stepped", true);
                 setDirection.SendmoveHorizontal += SetmoveHorizontal;
                 setDirection.SendmoveVertical += SetmoveVertical;
                 plateManager.SendMessage("platePressed");
+            }
+        }
+        public void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                _anim.SetBool("stepped", false);
             }
         }
     }

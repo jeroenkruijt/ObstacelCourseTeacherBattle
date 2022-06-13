@@ -22,6 +22,8 @@ namespace Scripts
     private bool timerActive = true;
     public int currentRooms;
     public int seed;
+    [SerializeField]
+    private bool presetSeed;
     public int readyTeams;
     public GameObject[] Rooms;
     [SerializeField]
@@ -40,7 +42,7 @@ namespace Scripts
     private GameObject[] progressTrackers;
     [SerializeField]
     private GameObject[] players;
-        void Update()
+    void Update()
     {
         //count down the timer and generate seeds;
         if (readyTeams == 1)
@@ -64,11 +66,13 @@ namespace Scripts
         //check if the amount of rooms on one side is 3 (so 6 in total since there are two sides)
         //if not, generate a random seed and check if it has been used before
         //if that is also not the case, generate a room based on the seed
-        if (currentRooms < 3)
+        if (currentRooms < 3 && presetSeed == false)
         {
-            if (seed < 0)  seed = Random.Range(0, Rooms.Length - 1);
+            seed = Random.Range(0, 4) * 3;
+            Debug.Log(seed);
             seedChecker();
             pastseeds.Add(seed);
+            seed += Random.Range(0, 3);
         }
         //if there are 3 rooms, generate an endroom instead
         else if (currentRooms == 3)
@@ -96,7 +100,7 @@ namespace Scripts
             {
                 if (seed == pastseeds[i])
                 {
-                    seed = Random.Range(0, Rooms.Length - 1);
+                    seed = (3 * Random.Range(0, 3));
                     checkFailed = true;
                     seedChecker();
                 }
