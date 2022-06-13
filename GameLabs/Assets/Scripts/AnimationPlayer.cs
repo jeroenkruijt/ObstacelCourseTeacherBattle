@@ -28,8 +28,8 @@ namespace Scripts {
                         _anim.SetInteger("Direction", 0);
                     }
                 }
-                
-                 else if (controller.direction == 1) //animation moving left
+
+                else if (controller.direction == 1) //animation moving left
                 {
                     Walking = -1;
                     if (Walking == -1)
@@ -49,7 +49,7 @@ namespace Scripts {
 
                 //if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") < 1 && Input.GetAxis("Horizontal") > -1) //animation moving up
                 //{
-                    
+
                 //}
                 else if (controller.direction == 3) //animation moving down
                 {
@@ -60,7 +60,7 @@ namespace Scripts {
                     }
                 }
             }
-            
+
             //if (Input.GetKeyDown("u")) //animation for attacking
             //{
             //    Attacking = true;
@@ -87,15 +87,15 @@ namespace Scripts {
             //        _anim.SetBool("rudead", true);
             //    }
             //}
-        
-        //    if (InteractScript.Respawn == true)
-        //    {
-        //        respawn = true;
-        //        if (respawn)
-        //        {
-        //            _anim.SetBool("AliveAgain", true);
-        //        }
-        //    }
+
+            //    if (InteractScript.Respawn == true)
+            //    {
+            //        respawn = true;
+            //        if (respawn)
+            //        {
+            //            _anim.SetBool("AliveAgain", true);
+            //        }
+            //    }
         }
 
         void GetHitAnimation()
@@ -132,7 +132,7 @@ namespace Scripts {
             _anim.SetBool("AliveAgain", true);
         }
 
-            private void ifMoving() //used for checking if should be idle or not
+        private void ifMoving() //used for checking if should be idle or not
         {
             if (controller.walkInput.x != 0 || controller.walkInput.y != 0)
             {
@@ -151,5 +151,5 @@ namespace Scripts {
                 }
             }
         }
-    }
+    }  
 }

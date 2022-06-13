@@ -11,12 +11,17 @@ namespace Scripts
         private GameObject connectedBox;
         [SerializeField]
         private Animator _anim;
+
+        public void Start()
+        {
+            _anim = GetComponent<Animator>();
+        }
         public void OnTriggerEnter2D(Collider2D other)
         {
             //if a player steps on this call the attached box' move function
             if (other.CompareTag("Player"))
             {
-                FindObjectOfType<AudioManager>().Play("switch");
+                //FindObjectOfType<AudioManager>().Play("switch");
                 _anim.SetBool("stepped", true);
                 connectedBox.GetComponent<moveable>().SendMessage("move");
             }

@@ -33,6 +33,7 @@ namespace Scripts
     private GameObject connectedDoor;
     public float minutes;
     public GameObject[] leverroomvariants;
+    public GameObject[] mazeroomvariants;
     [SerializeField]
     private GameObject Cam;
     [SerializeField]
