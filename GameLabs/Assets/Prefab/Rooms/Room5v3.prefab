@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &66250769628705756
@@ -804,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &481982393188725348
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &819985750718245805
@@ -2352,7 +2352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &1141200486667550674
@@ -4370,7 +4370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &2205091286160937520
@@ -7107,7 +7107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2470927254160743218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.5, y: -0.5, z: 0}
+  m_LocalPosition: {x: -13.5, y: -0.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 556784052117642520}
@@ -8031,7 +8031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &3114419433183079601
@@ -8188,7 +8188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &3173173053108353058
@@ -8495,7 +8495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &3198646708649994496
@@ -8745,7 +8745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &3260909470060309808
@@ -8995,7 +8995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &3339102630502430984
@@ -11842,7 +11842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &4572836933311398890
@@ -11967,7 +11967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &4605986690054545482
@@ -13903,7 +13903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &5038740663134998251
@@ -14210,7 +14210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &5093725059595746720
@@ -14585,7 +14585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &5186324542276529179
@@ -17909,7 +17909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &6324665608622986968
@@ -19273,7 +19273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &6697258490073874121
@@ -20502,7 +20502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7004889859394457299
@@ -20627,7 +20627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7037771868705269059
@@ -21502,7 +21502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7361745867110600276
@@ -21684,7 +21684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7439989616293487481
@@ -21809,7 +21809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7449644185346645674
@@ -21934,7 +21934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7517366511568127085
@@ -22434,7 +22434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7703195112732143319
@@ -22559,7 +22559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &7772521516376852655
@@ -28539,7 +28539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &8423168809829358483
@@ -28664,7 +28664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &8423559673588281894
@@ -29164,7 +29164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 2
+  CorrectPlayer: 1
   Glow: {fileID: -382544667690152232, guid: 26ce043c247286e4d88bf19350a673c5, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &8571624486812254607
@@ -30367,7 +30367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf0f2da9ec0ced148a3cc6a7c11b336c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CorrectPlayer: 1
+  CorrectPlayer: 2
   Glow: {fileID: -1989227977159374764, guid: 7cb1c87a35d9879439c218942b648581, type: 3}
   restartPos: {fileID: 2470927254160743218}
 --- !u!1 &9127905942826491015
