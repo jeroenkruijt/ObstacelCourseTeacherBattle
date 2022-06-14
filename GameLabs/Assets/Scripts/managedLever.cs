@@ -21,6 +21,7 @@ namespace Scripts
             if (triggered == false)
             {
                 leverManager.SendMessage("LeverAdded");
+                FindObjectOfType<AudioManager>().Play("correct");
                 triggered = true;
                 _anim.SetBool("Interacted", true);
             }

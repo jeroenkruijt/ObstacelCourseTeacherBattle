@@ -26,6 +26,7 @@ namespace Scripts
             {
                 triggered = true;
                 _anim.SetBool("Interacted", true);
+                FindObjectOfType<AudioManager>().Play("wrong");
                 managerofgame managerScript = gameManager.GetComponent<managerofgame>();
                 managerScript.timeValue = managerScript.timeValue + 5;
             }

@@ -33,6 +33,7 @@ namespace Scripts
             if (other.CompareTag("Player"))
             {
                 _anim.SetBool("stepped", true);
+                FindObjectOfType<AudioManager>().Play("switch");
                 setDirection.SendmoveHorizontal += SetmoveHorizontal;
                 setDirection.SendmoveVertical += SetmoveVertical;
                 plateManager.SendMessage("platePressed");
